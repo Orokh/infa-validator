@@ -1,23 +1,56 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import './app.css';
-import ReactImage from './react.png';
+import Title from './components/title';
+import SideBar from './components/sidebar/sidebar';
+import ResultDisplay from './components/result/resultDisplay';
 
 export default class App extends Component {
-  state = { username: null };
+	static propTypes = {
+		formModel: PropTypes.arrayOf(PropTypes.object).isRequired
+	};
 
-  componentDidMount() {
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
-  }
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
 
-  render() {
-    const { username } = this.state;
-    return (
-      <div>
-        {username ? <h1>{`Hello ${username}`}</h1> : <h1>Loading.. please wait!</h1>}
-        <img src={ReactImage} alt="react" />
-      </div>
-    );
-  }
+	onSubmit(model) {
+		const sentData = {
+			method: 'POST',
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(model)
+		};
+
+		fetch('/api/validate', sentData)
+			.then(response => response.json())
+			.then(jsonData => this.setState(jsonData))
+			.catch(err => alert('There was a problem during validation: ', err.message));
+	}
+
+	render() {
+		const { folders } = this.state;
+		const { formModel } = this.props;
+
+		return (
+			<div id="wrapper">
+				<Title />
+				<SideBar
+					formModel={formModel}
+					onSubmit={model => {
+						this.onSubmit(model);
+					}}
+				/>{' '}
+				<div id="resultContent" className="w3-main">
+					<div className="w3-container">
+						<ResultDisplay result={folders} />{' '}
+					</div>{' '}
+				</div>{' '}
+			</div>
+		);
+	}
 }

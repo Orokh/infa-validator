@@ -1,0 +1,162 @@
+[
+	{
+		"key": "groupConfig",
+		"label": "Configuration",
+		"components": [
+			{
+				"key": "showWarning",
+				"label": "Show Warning",
+				"type": "checkbox",
+				"defaultValue": true
+			},
+			{
+				"key": "descriptionLevel",
+				"label": "Descriptions",
+				"type": "range",
+				"defaultValue": "1",
+				"cmpProps": {
+					"min": 0,
+					"max": 2
+				}
+			}
+		]
+	},
+	{
+		"key": "groupFolder",
+		"label": "Folder Objects",
+		"components": [
+			{
+				"key": "workflowNaming",
+				"label": "Workflow",
+				"defaultValue": "wf"
+			},
+			{
+				"key": "workletNaming",
+				"label": "Worklet",
+				"defaultValue": "wklt"
+			},
+			{
+				"key": "sessionNaming",
+				"label": "Session",
+				"defaultValue": "s"
+			},
+			{
+				"key": "mappingNaming",
+				"label": "Mapping",
+				"defaultValue": "m"
+			},
+			{
+				"key": "mappletNaming",
+				"label": "Mapplet",
+				"defaultValue": "mplt"
+			}
+		]
+	},
+	{
+		"key": "groupMapping",
+		"label": "Mapping Transformations",
+		"components": [
+			{
+				"key": "aggNaming",
+				"label": "Aggreg.",
+				"defaultValue": "AGG"
+			},
+			{
+				"key": "expNaming",
+				"label": "Expression",
+				"defaultValue": "EXP"
+			},
+			{
+				"key": "filNaming",
+				"label": "Filter",
+				"defaultValue": "FIL"
+			},
+			{
+				"key": "mpltInNaming",
+				"label": "Input",
+				"defaultValue": "IN"
+			},
+			{
+				"key": "mpltOutNaming",
+				"label": "Output",
+				"defaultValue": "OUT"
+			},
+			{
+				"key": "jnrNaming",
+				"label": "Joiner",
+				"defaultValue": "JNR"
+			},
+			{
+				"key": "lkpNaming",
+				"label": "Lookup",
+				"defaultValue": "LKP"
+			},
+			{
+				"key": "lkpoNaming",
+				"label": "Lookup O",
+				"defaultValue": "LKP_OW"
+			},
+			{
+				"key": "nrmNaming",
+				"label": "Norm.",
+				"defaultValue": "NRM"
+			},
+			{
+				"key": "rtrNaming",
+				"label": "Router",
+				"defaultValue": "RTR"
+			},
+			{
+				"key": "seqNaming",
+				"label": "Sequence",
+				"defaultValue": "SEQ"
+			},
+			{
+				"key": "srtNaming",
+				"label": "Sorter",
+				"defaultValue": "SRT"
+			},
+			{
+				"key": "sqNaming",
+				"label": "Source",
+				"defaultValue": "SQ"
+			},
+			{
+				"key": "sqoNaming",
+				"label": "Source O",
+				"defaultValue": "SQ_OW"
+			},
+			{
+				"key": "unNaming",
+				"label": "Union",
+				"defaultValue": "UN"
+			},
+			{
+				"key": "updNaming",
+				"label": "Update",
+				"defaultValue": "UPD"
+			}
+		]
+	},
+	{
+		"key": "groupTransfo",
+		"label": "Transformation Fields",
+		"components": [
+			{
+				"key": "inputNaming",
+				"label": "Input",
+				"defaultValue": "i"
+			},
+			{
+				"key": "outputNaming",
+				"label": "Output",
+				"defaultValue": "o"
+			},
+			{
+				"key": "variableNaming",
+				"label": "Variable",
+				"defaultValue": "v"
+			}
+		]
+	}
+]

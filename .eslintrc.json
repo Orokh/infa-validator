@@ -1,13 +1,17 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["airbnb"],
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "rules": {
-    "no-console": "off",
-    "comma-dangle": "off",
-    "react/jsx-filename-extension": "off"
-  }
+	"parser": "babel-eslint",
+	"extends": ["airbnb", "prettier", "prettier/react"],
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"rules": {
+		"no-console": "off",
+		"comma-dangle": "off",
+		"react/jsx-filename-extension": "off",
+		"jsx-a11y/label-has-for": "off"
+	},
+	"globals": {
+		"PropTypes": false
+	}
 }

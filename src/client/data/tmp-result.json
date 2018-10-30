@@ -1,0 +1,4255 @@
+{
+  "extract_date": "10/02/2018 11:06:51",
+  "folders": [
+    {
+      "name": "OASIS_DATALAKE_SHARED",
+      "workflows": [],
+      "worklets": [],
+      "configs": [],
+      "sessions": [],
+      "mappings": [],
+      "mapplets": []
+    },
+    {
+      "name": "OASIS_DATALAKE",
+      "workflows": [
+        {
+          "name": "wf_TW_GZ",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            },
+            {
+              "severity": 1,
+              "text": "Badly named log file"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_PR_MORE_INFO_TYPE"
+            }
+          ],
+          "sessions": []
+        },
+        {
+          "name": "wf_PHENIX",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            },
+            {
+              "severity": 1,
+              "text": "Badly named log file"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_BATCH"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_EQUIPMENT"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_FINDING_RESPONSE_EVENT"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_ITEM"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_ITEM_CATEGORY"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_ITEM_FAMILY"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_ITEMBATCH_WORKFLOW"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_RESPONSE_EVENT_EQUIP"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_TEAM_MEMBER"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WF_ACTION"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WF_STATE_ACTION"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WF_STATE_STEP"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WF_STEP"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WF_TYPE_ACTION"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WF_TYPE"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WF_TYPE_STEP"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_WORKFLOW"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_CAPA_DVN_INVEST"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_INVESTIGATION"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_INVESTIGATION_STEP"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_INVEST_DVN_IMPACTCAT"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_INVEST_STEP_STATE"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_LOCATION_INJURY"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_LOC_INJURY_LIST"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_OCCURRENCE"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_OPERATION"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_RELATED_EVENT"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_SEVERITY"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_SOLVING_METHOD"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_TYPEEVT_DVN_EXPERTISE"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DVN_TYPE_EVT"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DEV_UTILISATEUR"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DEV_VALEUR_LIST"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_REF_BATCH"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_REF_ITEM"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_PHX_REF_TYPE_6M"
+            },
+            {
+              "severity": 1,
+              "text": "Failure management invalid: s_m_T_DEV_LANGUE"
+            }
+          ],
+          "sessions": []
+        },
+        {
+          "name": "wf_LUNATAT_PCII",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            },
+            {
+              "severity": 1,
+              "text": "Badly named log file"
+            }
+          ],
+          "sessions": [
+            {
+              "name": "s_m_VERSIONED_ANALYSIS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_VERSIONED_ANALYSIS)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_INC_CHECKLIST_RESULTS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_INC_CHECKLIST_RESULTS)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_TEST",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_TEST)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_SAMPLE",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_SAMPLE)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_RESULT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_RESULT)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_PERSONNEL",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_PERSONNEL)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_SW_VERSION_REACTIF",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_SW_VERSION_REACTIF)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_MLP_LEVEL",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_MLP_LEVEL)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_SW_ARTICLE",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_SW_ARTICLE)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_SW_METHPREL_SECTEUR",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_SW_METHPREL_SECTEUR)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_SW_METHODE_GENERALE",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_SW_METHODE_GENERALE)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_MLP_HEADER",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_MLP_HEADER)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_TEST_SCHED_HEADER",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_TEST_SCHED_HEADER)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_JOBTAB_HEADER",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_JOBTAB_HEADER)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_INSTRUMENT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_INSTRUMENT)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_VERSIONED_COMPONENT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_VERSIONED_COMPONENT)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_TEST_SCHED_ENTRY",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_TEST_SCHED_ENTRY)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_INCIDENTS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_INCIDENTS)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_SW_REACTIF",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_SW_REACTIF)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_MLP_VALUES",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_MLP_VALUES)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_GROUPLINK",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_GROUPLINK)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            },
+            {
+              "name": "s_m_GROUPE_HEADER",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name (Mapping m_GROUPE_HEADER)"
+                },
+                {
+                  "severity": 1,
+                  "text": "Default config is overriden"
+                },
+                {
+                  "severity": 1,
+                  "text": "Backward logs disabled"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "worklets": [],
+      "configs": [
+        {
+          "name": "default_session_config",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Stop on Errors should be set to 1"
+            }
+          ]
+        }
+      ],
+      "sessions": [
+        {
+          "name": "s_m_PR_CATEGORY_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_CATEGORY_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PERSON",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PERSON)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PERSON_RELATION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PERSON_RELATION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_DATA_FIELD",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_DATA_FIELDS)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_ENTITY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_ENTITY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_STATUS_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_STATUS_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_SEVERITY_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_SEVERIITY_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_TEXT_DATA",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_TEXT_DATA)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_QUESTION_REL",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_QUESTION_REL)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_PRIORITY_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_PRIORITY_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_DIVISION_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_DIVISION_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_MORE_INFO_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_MORE_INFO_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_ADDTL_DATA",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_ADDTL_DATA)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PROJECT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PROJECT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_ELEMENT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_ELEMENT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_PR_ACTIVITY_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_PR_ACTIVITY_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_GRID_DATA",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_GRID_DATA)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_QUESTION_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_QUESTION_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_ADDTL_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_ADDTL_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_WORK_VALIDATE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_WORK_VALIDATE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_WF_ACTION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_WF_ACTION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_RESPONSE_EVENT_EQUIP",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_RESPONSE_EVENT_EQUIP)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_FIRST_BATCH_COUNTRY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_FIRST_BATCH_COUNTRY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_DETECTABILITY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_DETECTABILITY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_IMPACT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_IMPACT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WF_STEP",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WF_STEP)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_IMPACT_CATEGORY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_IMPACT_CATEGORY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_REF_TYPE_6M",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_REF_TYPE_6M)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_ITEMBATCH_WORKFLOW",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_ITEMBATCH_WORKFLOW)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVENT_PHX_TYPE6M",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVENT_PHX_TYPE6M)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_INVEST_STEP_STATE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_INVEST_STEP_STATE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_OCCURRENCE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_OCCURRENCE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVT_TYPE_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVT_TYPE_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_SEVERITY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_SEVERITY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_CC_RELATED_EVENT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_CC_RELATED_EVENT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_FIRST_BATCH_COUNTRY_FILE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_FIRST_BATCH_COUNTRY_FILE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_SPECIALITY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_SPECIALITY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_CC_RELATED_SITE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_CC_RELATED_SITE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_HSE_INJRY_TYPE_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_HSE_INJRY_TYPE_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WF_ACTION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WF_ACTION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_CC_RELATED_ETP",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_CC_RELATED_ETP)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_ARTICLE_FAMILY_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_ARTICLE_FAMILY_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_INVESTIGATION_STEP",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_INVESTIGATE_STEP)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_EFFECTIVENESS_REV_FILES",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_EFFECTIVENESS_REV_FILES)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WF_TYPE_ACTION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WF_TYPE_ACTION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_RISK_LIMITS",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_RISK_LIMITS)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_FINDING_RESPONSE_EVENT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_FINDING_RESPONSE_EVENT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_EQUIPMENT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_EQUIPMENT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVENT_TYPE_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVENT_TYPE_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WORKFLOW",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WORKFLOW)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_CAPA_DVN_INVEST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_CAPA_DVN_INVEST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_JUSTIFICATION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_JUSTIFICATION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_SOLVING_METHOD",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_SOLVING_METHOD)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_CAPA",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_CAPA)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVT_CIRCUMSTANCE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVT_CIRCUMSTANCE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_CATEGORY_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_CATEGORY_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_ORGANISATION_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_ORGANISATION_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_HSE_BODY_PART_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_HSE_BODY_PART_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_LIBELLE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_LIBELLE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_JUSTIFICATION_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_JUSTIFICATION_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WF_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WF_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_APPROVAL_TIME",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_APPROVAL_TIME)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_INVESTIGATION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_INVESTIGATION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_LOC_INJURY_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_LOC_INJURY_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WF_STATE_STEP",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WF_STATE_STEP)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_OPERATION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_OPERATION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_REF_ITEM",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_REF_ITEM)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_TYPE_EVT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_TYPE_EVT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_CC_RELATED_CAPA",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_CC_RELATED_CAPA)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_REF_BATCH",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_REF_BATCH)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_FIRST_BATCH",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_FIRST_BATCH)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_ER",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_ER)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_CC",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_CC)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_VALEUR_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_VALEUR_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EXPERTISE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EXPERTISE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_RELATED_CCRF",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_CC_RELATED_CCRF)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_ATTACH",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_ATTACH)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_ITEM_CATEGORY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_ITEM_CATEGORY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_LANGUE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_LANGUE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_EFFECTIVENESS_REVIEW",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_EFFECTIVENESS_REVIEW)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVENT_DVN_OPERATION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVENT_DVN_OPERATION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_INJURY_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_INJURY_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_ITEM_FAMILY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_ITEM_FAMILY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_INJURY_TYPE_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_INJURY_TYPE_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_TYPEEVT_DVN_EXPERTISE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_TYPEEVT_DVN_EXPERTISE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_RISK_CONFIG",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_RISK_CONFIG)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_BATCH",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_BATCH)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_ITEM",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_ITEM)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_SPECIALITY_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_SPECIALITY_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_INVEST_DVN_IMPACTCAT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_INVEST_DVN_IMPACTCAT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_RESP_EVT_ROOT_CAUSE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_RESP_EVT_ROOT_CAUSE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_UTILISATEUR",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_UTILISATEUR)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVT_CIRCUMSTANCE_LIST",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVT_CIRCUMSTANCE_LIST)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_NIVEAU",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_NIVEAU)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_ER_DVN_CAPA2",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_ER_DVN_CAPA)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WF_STATE_ACTION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WF_STATE_ACTION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_RELATED_CC",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_CC_RELATED_CC)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVENT_TYPE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVENT_TYPE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_STORAGE_RISK",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_STORAGE_RISK)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_RELATED_EVENT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_RELATED_EVENT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_TRADUCTION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_TRADUCTION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_TEAM_MEMBER",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_TEAM_MEMBER)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_JUSTIFICATION_DEV_FILE",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_JUSTIFICATION_DEV_FILE)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DEV_ORGANISATION",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DEV_ORGANISATION)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_EVENT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_EVENT)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_CHC_REF_SPECIALITY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_CHC_REF_SPECIALITY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_PHX_WF_TYPE_STEP",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_PHX_WF_TYPE_STEP)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_LOCATION_INJURY",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_LOCATION_INJURY)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        },
+        {
+          "name": "s_m_T_DVN_BARRIER",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name (Mapping m_T_DVN_BARRIER)"
+            },
+            {
+              "severity": 1,
+              "text": "Default config is overriden"
+            },
+            {
+              "severity": 1,
+              "text": "Backward logs disabled"
+            }
+          ]
+        }
+      ],
+      "mappings": [
+        {
+          "name": "m_PR_CATEGORY_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_CATEGORY_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PERSON",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PERSON",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PERSON_RELATION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PERSON_RELATION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_DATA_FIELDS",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_DATA_FIELDS",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_ENTITY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_ENTITY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PR_STATUS_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_STATUS_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PR_SEVERIITY_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_SEVERITY_TYPE",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Output S_EXTERNAL_ID not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_PR",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PR_TEXT_DATA",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_TEXT_DATA",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_QUESTION_REL",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_QUESTION_REL",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PR_PRIORITY_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_PRIORITY_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_DIVISION_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_DIVISION_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PR_MORE_INFO_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_MORE_INFO_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PR_ADDTL_DATA",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_ADDTL_DATA",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PROJECT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PROJECT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PR_ELEMENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_ELEMENT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Output TEXT not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_PR_ACTIVITY_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_PR_ACTIVITY_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_GRID_DATA",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_GRID_DATA",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_QUESTION_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_QUESTION_LIST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_ADDTL_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_ADDTL_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_WORK_VALIDATE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_WORK_VALIDATE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_WF_ACTION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_WF_ACTION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_RESPONSE_EVENT_EQUIP",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_RESPONSE_EVENT_EQUIP",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_FIRST_BATCH_COUNTRY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_FIRST_BATCH_COUNTRY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_DETECTABILITY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_DETECTABILITY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_IMPACT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_IMPACT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WF_STEP",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WF_STEP",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_IMPACT_CATEGORY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_IMPACT_CATEGORY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_REF_TYPE_6M",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_REF_TYPE_6M",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_ITEMBATCH_WORKFLOW",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_ITEMBATCH_WORKFLOW",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Output INITIAL not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVENT_PHX_TYPE6M",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVENT_PHX_TYPE6M",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_EVENT__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_PHX_REF_TYPE_6M__ID (INPUT field)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_INVEST_STEP_STATE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_INVEST_STEP_STATE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_OCCURRENCE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_OCCURRENCE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVT_TYPE_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVT_TYPE_LIST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_SEVERITY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_SEVERITY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_CC_RELATED_EVENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_CC_RELATED_EVENT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_FIRST_BATCH_COUNTRY_FILE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_FIRST_BATCH_COUNTRY_FILE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_SPECIALITY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_SPECIALITY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_CC_RELATED_SITE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_CC_RELATED_SITE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_HSE_INJRY_TYPE_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_HSE_INJRY_TYPE_LIST",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_EVENT__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_HSE_INRY_TYE__ID (INPUT field)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WF_ACTION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WF_ACTION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_CC_RELATED_ETP",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_CC_RELATED_ETP",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_ARTICLE_FAMILY_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_ARTICLE_FAMILY_LIST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_INVESTIGATE_STEP",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_INVESTIGATION_STEP",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_EFFECTIVENESS_REV_FILES",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_EFFECTIVENESS_REV_FILES",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WF_TYPE_ACTION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WF_TYPE_ACTION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_RISK_LIMITS",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_RISK_LIMITS",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_FINDING_RESPONSE_EVENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_FINDING_RESPONSE_EVENT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_EQUIPMENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_EQUIPMENT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVENT_TYPE_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVENT_TYPE_LIST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WORKFLOW",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WORKFLOW",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_CAPA_DVN_INVEST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_CAPA_DVN_INVEST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_JUSTIFICATION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_JUSTIFICATION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_SOLVING_METHOD",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_SOLVING_METHOD",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DEV_LIBELLE__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field CCN (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field CODE (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field tmp_CODE (LOCAL VARIABLE field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field DELETED (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input CODE not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_CODE not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_CAPA",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_CAPA",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVT_CIRCUMSTANCE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVT_CIRCUMSTANCE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_CATEGORY_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_CATEGORY_LIST",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_CATEGORY__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_CATEGORY_LIST__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_CATEGORY_VALUE (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field tmp_T_DVN_CATEGORY_VALUE (LOCAL VARIABLE field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input T_DVN_CATEGORY_VALUE not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_T_DVN_CATEGORY_VALUE not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_ORGANISATION_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_ORGANISATION_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_HSE_BODY_PART_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_HSE_BODY_PART_LIST",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_EVENT__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_HSE_BODY_PRT__ID (INPUT field)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_LIBELLE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_LIBELLE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_JUSTIFICATION_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_JUSTIFICATION_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WF_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WF_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_APPROVAL_TIME",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_APPROVAL_TIME",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_INVESTIGATION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_INVESTIGATION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_LOC_INJURY_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_LOC_INJURY_LIST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WF_STATE_STEP",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WF_STATE_STEP",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_OPERATION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_OPERATION",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DEV_ORGANISATION__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DEV_LIBELLE__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field CCN (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field CODE (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field tmp_CODE (LOCAL VARIABLE field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field DELETED (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field ORDER_NUM (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input CODE not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_CODE not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_REF_ITEM",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_REF_ITEM",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_TYPE_EVT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_TYPE_EVT",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_TYPE_EVT__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DEV_LIBELLE__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field CCN (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field CODE (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field tmp_CODE (LOCAL VARIABLE field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field DELETED (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field FUTURE (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input CODE not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_CODE not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_CC_RELATED_CAPA",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_CC_RELATED_CAPA",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_REF_BATCH",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_REF_BATCH",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_FIRST_BATCH",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_FIRST_BATCH",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_ER",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_ER",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_CC",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_CC",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_VALEUR_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_VALEUR_LISTE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EXPERTISE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EXPERTISE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_CC_RELATED_CCRF",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_CC_RELATED_CCRF",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_ATTACH",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_ATTACH",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_ITEM_CATEGORY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_ITEM_CATEGORY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_LANGUE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_LANGUE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_EFFECTIVENESS_REVIEW",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_EFFECTIVENESS_REVIEW",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVENT_DVN_OPERATION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVENT_DVN_OPERATION",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_EVENT__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field T_DVN_OPERATION__ID (INPUT field)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_INJURY_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_INJURY_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_ITEM_FAMILY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_ITEM_FAMILY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_INJURY_TYPE_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_INJURY_TYPE_LIST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_TYPEEVT_DVN_EXPERTISE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_TYPEEVT_DVN_EXPERTISE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_RISK_CONFIG",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_RISK_CONFIG",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_BATCH",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_BATCH",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_ITEM",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_ITEM",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_SPECIALITY_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_SPECIALITY_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_INVEST_DVN_IMPACTCAT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_INVEST_DVN_IMPACTCAT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_RESP_EVT_ROOT_CAUSE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_RESP_EVT_ROOT_CAUSE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_UTILISATEUR",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_UTILISATEUR",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVT_CIRCUMSTANCE_LIST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVT_CIRCUMSTANCE_LIST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_NIVEAU",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_NIVEAU",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_ER_DVN_CAPA",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_ER_DVN_CAPA",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WF_STATE_ACTION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WF_STATE_ACTION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_CC_RELATED_CC",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_CC_RELATED_CC",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVENT_TYPE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVENT_TYPE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_STORAGE_RISK",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_STORAGE_RISK",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_RELATED_EVENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_RELATED_EVENT",
+              "errors": []
+            },
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field DVN_EVENT__ID (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field RELATED_EVENT__ID (INPUT field)"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_TRADUCTION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_TRADUCTION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_TEAM_MEMBER",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_TEAM_MEMBER",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_JUSTIFICATION_DEV_FILE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_JUSTIFICATION_DEV_FILE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DEV_ORGANISATION",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DEV_ORGANISATION",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_EVENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_EVENT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_CHC_REF_SPECIALITY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_CHC_REF_SPECIALITY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_PHX_WF_TYPE_STEP",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_PHX_WF_TYPE_STEP",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_LOCATION_INJURY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_LOCATION_INJURY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_T_DVN_BARRIER",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_T_DVN_BARRIER",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_GROUPE_HEADER",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_GROUP_HEADER",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_GROUPLINK",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "GROUPLINK",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_MLP_VALUES",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_MLP_VALUES",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_SW_REACTIF",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_SW_REACTIF",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_INCIDENTS",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_INCIDENTS",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_TEST_SCHED_ENTRY",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_TEST_SCHED_ENTRY",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_VERSIONED_COMPONENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "VERSIONED_COMPONENT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_INSTRUMENT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_INSTRUMENT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_JOBTAB_HEADER",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_JOB_HEADER",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_TEST_SCHED_HEADER",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_TEST_SCHED_HEADER",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_MLP_HEADER",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_MLP_HEADER",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_SW_METHODE_GENERALE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_SW_METHODE_GENERALE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_SW_METHPREL_SECTEUR",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_SW_METHPREL_SECTEUR",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_SW_ARTICLE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_SW_ARTICLE",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_MLP_LEVEL",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_MLP_LEVEL",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_SW_VERSION_REACTIF",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_SW_VERSION_REACTIF",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_PERSONNEL",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_PERSONNEL",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_RESULT",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_RESULT",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_SAMPLE",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_SAMPLE_s",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_TEST",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_TEST",
+              "errors": []
+            }
+          ]
+        },
+        {
+          "name": "m_INC_CHECKLIST_RESULTS",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "SQ_Shortcut_to_INC_CHECKLIST_RESULTS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Output ACTION_TYPE not connected"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "m_VERSIONED_ANALYSIS",
+          "errors": [],
+          "transformations": [
+            {
+              "name": "VERSIONED_ANALYSIS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "mapplets": [
+        {
+          "name": "mpl_CLEAN_TEXT",
+          "errors": [
+            {
+              "severity": 2,
+              "text": "Invalid Name"
+            }
+          ],
+          "transformations": [
+            {
+              "name": "EXPTRANS",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                }
+              ]
+            },
+            {
+              "name": "INPUT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field i_TEXT_1 (OUTPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field i_TEXT_2 (OUTPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field i_TEXT_3 (OUTPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field i_TEXT_4 (OUTPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field i_TEXT_5 (OUTPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field i_TEXT_6 (OUTPUT field)"
+                }
+              ]
+            },
+            {
+              "name": "OUTPUT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field o_TEXT_1 (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field o_TEXT_2 (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field o_TEXT_3 (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field o_TEXT_4 (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field o_TEXT_5 (INPUT field)"
+                },
+                {
+                  "severity": 2,
+                  "text": "Rename field o_TEXT_6 (INPUT field)"
+                }
+              ]
+            },
+            {
+              "name": "mpl_CLEAN_TEXT",
+              "errors": [
+                {
+                  "severity": 2,
+                  "text": "Invalid Name"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input i_TEXT_1 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input i_TEXT_2 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input i_TEXT_3 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input i_TEXT_4 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input i_TEXT_5 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Input i_TEXT_6 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_TEXT_1 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_TEXT_2 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_TEXT_3 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_TEXT_4 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_TEXT_5 not connected"
+                },
+                {
+                  "severity": 2,
+                  "text": "Output o_TEXT_6 not connected"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

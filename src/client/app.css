@@ -1,8 +1,268 @@
-h1 {
-  color: green;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html,
+body {
+	font-family: 'Roboto', serif !important;
+}
+
+input:focus,
+input:hover {
+	border-color: #f00;
+	outline: 0;
+}
+
+#header {
+	z-index: 5;
+}
+
+#sideNav {
+	width: 300px;
+	top: 0px;
+}
+
+.hidden-input {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.sidebar-group {
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.material-icons {
+	vertical-align: -14%;
+}
+
+#resultContent {
+	margin-left: 300px;
+}
+
+.loader {
+	position: relative;
+	display: flex;
+	right: 5px;
+	top: 0px;
+	border: 4px solid #cecece; /* Light grey */
+	border-top: 4px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* .icon-alert {
+	font-size: 22px;
+	float: left;
+	margin-right: 5px;
+}
+
+.material-icons {
+	vertical-align: -14%;
 }
 
 body {
-  text-align: center;
-  margin: auto;
+	font-size: 0.8em;
+	background-color: #eee;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
+
+#title {
+	z-index: 3;
+	position: relative;
+	top: 0px;
+	width: 100%;
+}
+
+
+#file-input-button {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.txt-normal {
+	font-style: normal;
+}
+
+#header {
+	height: 50px;
+	background-color: #424242;
+}
+
+#header > #menuBtn {
+	height: 30px;
+	margin: 10px 10px 0 10px;
+}
+
+#header > #headerTitle {
+	font-weight: bold;
+	color: #ffffff;
+	font-size: 30px;
+	padding-bottom: 5px;
+	vertical-align: middle;
+}
+
+#treeView .ROOT {
+	font-weight: bold;
+}
+
+#config {
+	float: left;
+	margin-right: 20px;
+	width: 20em;
+	height: 100%;
+}
+
+#config form {
+}
+
+@media screen and (max-width: 200px) {
+	#config {
+		float: none;
+		margin-right: 0;
+		width: auto;
+		border: 0;
+		border-bottom: 2px solid #000;
+	}
+}
+
+#content {
+	overflow: hidden;
+	margin: 10px;
+	min-height: 170px;
+}
+
+.card {
+	background-color: white;
+	padding: 6px 6px 6px 6px;
+}
+
+.strike {
+	width: 100%;
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.strike > span {
+	margin-top: 10px;
+	position: relative;
+	display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+	background: red;
+}
+
+.strike > span:before {
+	right: 100%;
+	margin-right: 15px;
+}
+
+.strike > span:after {
+	left: 100%;
+	margin-left: 15px;
+}
+
+legend {
+	font-weight: bold;
+	color: #03a9f4;
+}
+
+label {
+	float: left;
+	padding: 5px 0px 5px 0;
+	width: 60px;
+	clear: left;
+}
+
+.longLbl {
+	width: 80px;
+}
+
+input,
+select {
+	float: right;
+	border: 1px solid silver;
+	padding: 0px 7px 1px 8px;
+	border-width: 0 0 1px 2px;
+	width: 150px;
+	margin-top: 5px;
+	color: #404040;
+	transition: border-color 0.3s;
+}
+
+input:focus,
+input:hover {
+	border-color: #03a9f4;
+	outline: 0;
+}
+
+input.warning {
+	border-color: #ff9800;
+}
+
+input.error {
+	border-color: #f44336;
+}
+
+input.valid {
+	border-color: #4caf50;
+}
+
+input[type='button'] {
+	border: 0;
+	background-color: white;
+	color: #03a9f4;
+	text-transform: uppercase;
+	width: auto;
+	cursor: pointer;
+	float: left;
+}
+
+input[type='file'] {
+	float: left;
+	width: 100%;
+	margin-left: -5px;
+	padding-left: 0px;
+	border: 0;
+}
+
+input[type~='text'] {
+	font-family: consolas;
+	padding-bottom: 2px;
+}
+
+
+.hoverable {
+	cursor: pointer;
+}
+ */

@@ -79,7 +79,7 @@ app.post('/api/validate', (req, res) => {
 			'UPDATE STRATEGY': req.body.updNaming,
 			FIELD_INPUT: req.body.inputNaming,
 			FIELD_OUTPUT: req.body.outputNaming,
-			FIELD_LOCAL_VARIABLE: req.body.variableNaming
+			'FIELD_LOCAL VARIABLE': req.body.variableNaming
 		}
 	};
 

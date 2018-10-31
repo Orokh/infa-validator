@@ -1,7 +1,8 @@
 # INFA - VALIDATOR
 
-## Todo List
+### Todo List
 
+-   [ ] Write a nice readme
 -   [ ] Add loader on validate action
 -   [ ] Add error count on each tab
 -   [ ] Add error count on each folder drop down element

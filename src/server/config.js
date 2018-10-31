@@ -37,7 +37,7 @@ module.exports = Object.freeze({
 		'INPUT',
 		'NORMALIZER',
 		'OUTPUT',
-		'ROUTER',
+		'Router',
 		'SEQUENCE'
 	],
 	EXCLUDE_TRANS_CONNEC: [

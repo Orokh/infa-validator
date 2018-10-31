@@ -7,7 +7,7 @@ export default function ResultGroup(props) {
 	const { groupL1, groupL2Name } = props;
 	let ret = '';
 
-	if (groupL1.length === 0) {
+	if (groupL1.length === 0 && groupL2Name !== '') {
 		ret = (
 			<div>
 				<ul className="w3-ul">

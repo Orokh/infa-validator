@@ -51,11 +51,8 @@ class MappItemValidator {
 		let transType = trans.$.TYPE;
 
 		// Take custom types in account
-		if (
-			transType.toUpperCase() === config.OBJECT_TYPE.CUSTOM &&
-			trans.$.TEMPLATENAME.toUpperCase() === config.OBJECT_TYPE.UNION
-		) {
-			transType = config.OBJECT_TYPE.UNION;
+		if (transType === config.OBJECT_TYPE.CUSTOM) {
+			transType = trans.$.TEMPLATENAME;
 		}
 
 		result.errors.push(common.checkName(trans.$.NAME, transType, this.params));

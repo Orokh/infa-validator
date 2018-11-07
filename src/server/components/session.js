@@ -8,7 +8,7 @@ class SessionValidator {
 	}
 
 	validate(session) {
-		const result = {
+		let result = {
 			name: session.$.NAME,
 			errors: []
 		};
@@ -37,6 +37,11 @@ class SessionValidator {
 		}
 
 		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
+
+		result = {
+			...result,
+			...common.getCount(result.errors)
+		};
 
 		return result;
 	}

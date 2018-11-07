@@ -16,8 +16,10 @@ class FolderValidator {
 	}
 
 	validate(folder) {
-		const res = {
+		const result = {
 			name: folder.$.NAME,
+			countErrors: 0,
+			countWarn: 0,
 			workflows: [],
 			worklets: [],
 			configs: [],
@@ -27,29 +29,47 @@ class FolderValidator {
 		};
 
 		if (folder.WORKFLOW) {
-			res.workflows = folder.WORKFLOW.map(e => this.workflowValidator.validate(e));
+			result.workflows = folder.WORKFLOW.map(e => this.workflowValidator.validate(e));
+
+			result.countErrors += result.workflows.reduce((agg, elt) => agg + elt.countErrors);
+			result.countWarn += result.workflows.reduce((agg, elt) => agg + elt.countWarn);
 		}
 		if (folder.WORKLET) {
-			res.worklets = folder.WORKLET.map(e => this.workletValidator.validate(e));
+			result.worklets = folder.WORKLET.map(e => this.workletValidator.validate(e));
+
+			result.countErrors += result.worklets.reduce((agg, elt) => agg + elt.countErrors);
+			result.countWarn += result.worklets.reduce((agg, elt) => agg + elt.countWarn);
 		}
 
 		if (folder.CONFIG) {
-			res.configs = folder.CONFIG.map(e => FolderValidator.checkConfig(e));
+			result.configs = folder.CONFIG.map(e => FolderValidator.checkConfig(e));
+
+			result.countErrors += result.configs.reduce((agg, elt) => agg + elt.countErrors);
+			result.countWarn += result.configs.reduce((agg, elt) => agg + elt.countWarn);
 		}
 
 		if (folder.SESSION) {
-			res.sessions = folder.SESSION.map(e => this.sessionValidator.validate(e));
+			result.sessions = folder.SESSION.map(e => this.sessionValidator.validate(e));
+
+			result.countErrors += result.sessions.reduce((agg, elt) => agg + elt.countErrors);
+			result.countWarn += result.sessions.reduce((agg, elt) => agg + elt.countWarn);
 		}
 
 		if (folder.MAPPING) {
-			res.mappings = folder.MAPPING.map(e => this.mappingValidator.validate(e));
+			result.mappings = folder.MAPPING.map(e => this.mappingValidator.validate(e));
+
+			result.countErrors += result.mappings.reduce((agg, elt) => agg + elt.countErrors);
+			result.countWarn += result.mappings.reduce((agg, elt) => agg + elt.countWarn);
 		}
 
 		if (folder.MAPPLET) {
-			res.mapplets = folder.MAPPLET.map(e => this.mappletValidator.validate(e));
+			result.mapplets = folder.MAPPLET.map(e => this.mappletValidator.validate(e));
+
+			result.countErrors += result.mapplets.reduce((agg, elt) => agg + elt.countErrors);
+			result.countWarn += result.mapplets.reduce((agg, elt) => agg + elt.countWarn);
 		}
 
-		return res;
+		return result;
 	}
 
 	static checkConfig(cfgItem) {

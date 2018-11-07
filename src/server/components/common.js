@@ -42,5 +42,25 @@ function checkDescription(description, params) {
 	return result;
 }
 
+function getCount(errors) {
+	const resCount = {
+		countErrors: 0,
+		countWarn: 0
+	};
+
+	resCount.countErrors = errors.reduce(
+		(acc, curr) => (curr.severity === config.SEVERITY.ERROR ? acc + 1 : acc),
+		0
+	);
+
+	resCount.countWarn = errors.reduce(
+		(acc, curr) => (curr.severity === config.SEVERITY.WARNING ? acc + 1 : acc),
+		0
+	);
+
+	return resCount;
+}
+
 module.exports.checkName = checkName;
 module.exports.checkDescription = checkDescription;
+module.exports.getCount = getCount;

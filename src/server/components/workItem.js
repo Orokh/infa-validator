@@ -11,7 +11,7 @@ class WorkItemValidator {
 	}
 
 	validate(workItem) {
-		const result = {
+		let result = {
 			name: workItem.$.NAME,
 			errors: [],
 			sessions: []
@@ -34,10 +34,19 @@ class WorkItemValidator {
 
 		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
 
+		result = {
+			...result,
+			...common.getCount(result.errors)
+		};
+
 		// Sessions
 		if (workItem.SESSION) {
 			result.sessions = workItem.SESSION.map(e => this.sessionValidator.validate(e));
+
+			result.countErrors += result.sessions.reduce((agg, elt) => agg + elt.countErrors);
+			result.countWarn += result.sessions.reduce((agg, elt) => agg + elt.countWarn);
 		}
+
 		return result;
 	}
 

@@ -8,7 +8,7 @@ class MappItemValidator {
 	}
 
 	validate(mappItem) {
-		const result = {
+		let result = {
 			name: mappItem.$.NAME,
 			errors: [],
 			transformations: []
@@ -24,27 +24,38 @@ class MappItemValidator {
 			toLinks.push(`${e.$.TOINSTANCE}|${e.$.TOFIELD}`);
 		});
 
+		if (mappItem.CONNECTOR) {
+			result.errors.push(
+				...mappItem.CONNECTOR.map(e =>
+					MappItemValidator.checkConnector(e, mappItem.TRANSFORMATION)
+				)
+			);
+		}
+
+		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
+
+		result = {
+			...result,
+			...common.getCount(result.errors)
+		};
+
+		// Transformations
 		if (mappItem.TRANSFORMATION) {
 			result.transformations = mappItem.TRANSFORMATION.map(e =>
 				this.checkTransformation(e, fromLinks, toLinks)
 			);
 
-			if (mappItem.CONNECTOR) {
-				result.errors.push(
-					...mappItem.CONNECTOR.map(e =>
-						MappItemValidator.checkConnector(e, mappItem.TRANSFORMATION)
-					)
-				);
-			}
+			result.countErrors += result.transformations.reduce(
+				(agg, elt) => agg + elt.countErrors
+			);
+			result.countWarn += result.transformations.reduce((agg, elt) => agg + elt.countWarn);
 		}
-
-		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
 
 		return result;
 	}
 
 	checkTransformation(trans, fromLinks, toLinks) {
-		const result = {
+		let result = {
 			name: trans.$.NAME,
 			errors: []
 		};
@@ -80,6 +91,11 @@ class MappItemValidator {
 		}
 
 		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
+
+		result = {
+			...result,
+			...common.getCount(result.errors)
+		};
 
 		return result;
 	}

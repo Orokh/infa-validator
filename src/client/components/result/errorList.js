@@ -27,7 +27,7 @@ export default function ErrorList(props) {
 		);
 	}
 
-	return <ul className="w3-ul"> {listContent} </ul>;
+	return <ul className="w3-ul collapsible collapsed"> {listContent} </ul>;
 }
 
 ErrorList.propTypes = {

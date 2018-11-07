@@ -83,7 +83,7 @@ export default class ResultDisplay extends React.Component {
 
 		this.setState({
 			selectedType: newLevel.level1,
-			subLevel: newLevel.level2 || ''
+			subLevel: newLevel.level2
 		});
 	}
 
@@ -118,8 +118,8 @@ export default class ResultDisplay extends React.Component {
 					className="treeView w3-container w3-white w3-padding w3-margin-bottom"
 				>
 					<ResultGroup
-						groupL1={result[selectedFolder][selectedType]}
-						groupL2Name={subLevel}
+						group={result[selectedFolder][selectedType]}
+						subGroupName={subLevel}
 					/>{' '}
 				</div>{' '}
 			</div>

@@ -5,12 +5,6 @@ body {
 	font-family: 'Roboto', serif !important;
 }
 
-input:focus,
-input:hover {
-	border-color: #f00;
-	outline: 0;
-}
-
 #header {
 	z-index: 5;
 }
@@ -27,6 +21,51 @@ input:hover {
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
+}
+
+.collapsible-header {
+	display: none;
+}
+
+.collapsible-header-label {
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.25s ease-out;
+}
+
+.collapsible-header-label::before {
+	content: ' ';
+	display: inline-block;
+
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid currentColor;
+
+	vertical-align: middle;
+	margin-right: 0.7rem;
+	transform: translateY(-2px);
+
+	transition: transform 0.2s ease-in-out;
+}
+
+.collapsible-header:checked + .collapsible-header-label + .collapsible-content {
+	max-height: none;
+}
+
+.collapsible-header:checked + .collapsible-header-label::before {
+	transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-header:checked + .collapsible-header-label {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.collapsible-content {
+	max-height: 0px;
+	overflow: hidden;
+
+	transition: max-height 0.2s ease-in-out;
 }
 
 .sidebar-group {

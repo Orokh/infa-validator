@@ -7,10 +7,10 @@ export default function FolderSelector(props) {
 	return (
 		<select className="w3-select w3-third w3-margin w3-card-2" onChange={onChange}>
 			{' '}
-			{list.map((e, idx) => (
-				<option key={e.name} value={idx}>
+			{list.map((elt, idx) => (
+				<option key={elt.name} value={idx}>
 					{' '}
-					{e.name}{' '}
+					{`${elt.name} (${elt.countErrors}|${elt.countWarn})`}{' '}
 				</option>
 			))}{' '}
 		</select>

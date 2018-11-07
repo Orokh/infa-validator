@@ -6,7 +6,6 @@ import ErrorList from './errorList';
 export default function ResultGroup(props) {
 	const { group } = props;
 
-	const countError = group.map(elt => elt.errors.length);
 	const errorList = group.map(
 		elt =>
 			elt.errors.length > 0 ? (
@@ -28,10 +27,14 @@ export default function ResultGroup(props) {
 						<input id={elt.name} className="collapsible-header" type="checkbox" />
 						<label
 							htmlFor={elt.name}
-							className={countError[idx] > 0 ? 'collapsible-header-label' : ''}
+							className={
+								elt.countErrors + elt.countWarn > 0
+									? 'collapsible-header-label'
+									: ''
+							}
 						>
 							{' '}
-							{`${elt.name} (${countError[idx]})`}{' '}
+							{`${elt.name} (${elt.countErrors}|${elt.countWarn})`}{' '}
 						</label>{' '}
 						{errorList[idx]}{' '}
 					</li>

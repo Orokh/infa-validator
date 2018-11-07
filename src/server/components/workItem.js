@@ -43,8 +43,8 @@ class WorkItemValidator {
 		if (workItem.SESSION) {
 			result.sessions = workItem.SESSION.map(e => this.sessionValidator.validate(e));
 
-			result.countErrors += result.sessions.reduce((agg, elt) => agg + elt.countErrors);
-			result.countWarn += result.sessions.reduce((agg, elt) => agg + elt.countWarn);
+			result.countErrors += result.sessions.reduce((agg, elt) => agg + elt.countErrors, 0);
+			result.countWarn += result.sessions.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
 		return result;

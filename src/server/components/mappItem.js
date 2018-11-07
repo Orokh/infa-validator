@@ -41,14 +41,29 @@ class MappItemValidator {
 
 		// Transformations
 		if (mappItem.TRANSFORMATION) {
-			result.transformations = mappItem.TRANSFORMATION.map(e =>
+			let transformations = [];
+
+			if (this.type === config.OBJECT_TYPE.MAPPLET) {
+				transformations = mappItem.TRANSFORMATION.filter(
+					elt => elt.$.TYPE !== config.OBJECT_TYPE.MAPPLET
+				);
+
+				if (transformations.length !== mappItem.TRANSFORMATION.length) {
+					console.log('item removed');
+				}
+			} else {
+				transformations = mappItem.TRANSFORMATION.slice();
+			}
+
+			result.transformations = transformations.map(e =>
 				this.checkTransformation(e, fromLinks, toLinks)
 			);
 
 			result.countErrors += result.transformations.reduce(
-				(agg, elt) => agg + elt.countErrors
+				(agg, elt) => agg + elt.countErrors,
+				0
 			);
-			result.countWarn += result.transformations.reduce((agg, elt) => agg + elt.countWarn);
+			result.countWarn += result.transformations.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
 		return result;

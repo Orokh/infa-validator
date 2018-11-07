@@ -15,6 +15,8 @@ export default class ResultDisplay extends React.Component {
 		result: [
 			{
 				name: 'N.A',
+				countErrors: '-',
+				countWarn: '-',
 				workflows: [],
 				worklets: [],
 				configs: [],

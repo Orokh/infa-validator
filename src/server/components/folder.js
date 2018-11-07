@@ -3,6 +3,8 @@ const WorkItemValidator = require('./workItem');
 const SessionValidator = require('./session');
 const MappItemValidator = require('./mappItem');
 
+const common = require('./common');
+
 class FolderValidator {
 	constructor(params) {
 		this.type = config.OBJECT_TYPE.FOLDER;
@@ -31,49 +33,50 @@ class FolderValidator {
 		if (folder.WORKFLOW) {
 			result.workflows = folder.WORKFLOW.map(e => this.workflowValidator.validate(e));
 
-			result.countErrors += result.workflows.reduce((agg, elt) => agg + elt.countErrors);
-			result.countWarn += result.workflows.reduce((agg, elt) => agg + elt.countWarn);
+			result.countErrors += result.workflows.reduce((agg, elt) => agg + elt.countErrors, 0);
+			result.countWarn += result.workflows.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
+
 		if (folder.WORKLET) {
 			result.worklets = folder.WORKLET.map(e => this.workletValidator.validate(e));
 
-			result.countErrors += result.worklets.reduce((agg, elt) => agg + elt.countErrors);
-			result.countWarn += result.worklets.reduce((agg, elt) => agg + elt.countWarn);
+			result.countErrors += result.worklets.reduce((agg, elt) => agg + elt.countErrors, 0);
+			result.countWarn += result.worklets.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
 		if (folder.CONFIG) {
 			result.configs = folder.CONFIG.map(e => FolderValidator.checkConfig(e));
 
-			result.countErrors += result.configs.reduce((agg, elt) => agg + elt.countErrors);
-			result.countWarn += result.configs.reduce((agg, elt) => agg + elt.countWarn);
+			result.countErrors += result.configs.reduce((agg, elt) => agg + elt.countErrors, 0);
+			result.countWarn += result.configs.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
 		if (folder.SESSION) {
 			result.sessions = folder.SESSION.map(e => this.sessionValidator.validate(e));
 
-			result.countErrors += result.sessions.reduce((agg, elt) => agg + elt.countErrors);
-			result.countWarn += result.sessions.reduce((agg, elt) => agg + elt.countWarn);
+			result.countErrors += result.sessions.reduce((agg, elt) => agg + elt.countErrors, 0);
+			result.countWarn += result.sessions.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
 		if (folder.MAPPING) {
 			result.mappings = folder.MAPPING.map(e => this.mappingValidator.validate(e));
 
-			result.countErrors += result.mappings.reduce((agg, elt) => agg + elt.countErrors);
-			result.countWarn += result.mappings.reduce((agg, elt) => agg + elt.countWarn);
+			result.countErrors += result.mappings.reduce((agg, elt) => agg + elt.countErrors, 0);
+			result.countWarn += result.mappings.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
 		if (folder.MAPPLET) {
 			result.mapplets = folder.MAPPLET.map(e => this.mappletValidator.validate(e));
 
-			result.countErrors += result.mapplets.reduce((agg, elt) => agg + elt.countErrors);
-			result.countWarn += result.mapplets.reduce((agg, elt) => agg + elt.countWarn);
+			result.countErrors += result.mapplets.reduce((agg, elt) => agg + elt.countErrors, 0);
+			result.countWarn += result.mapplets.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
 		return result;
 	}
 
 	static checkConfig(cfgItem) {
-		const result = {
+		let result = {
 			name: cfgItem.$.NAME,
 			errors: []
 		};
@@ -83,6 +86,11 @@ class FolderValidator {
 		}
 
 		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
+
+		result = {
+			...result,
+			...common.getCount(result.errors)
+		};
 
 		return result;
 	}

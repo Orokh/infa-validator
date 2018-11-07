@@ -15,18 +15,9 @@ export default function ResultGroup(props) {
 		// Level 1 group
 
 		let subGroups = [];
-		let countError = 0;
 
 		if (subGroupName.length > 0) {
 			subGroups = group.map(elt => <ResultSubGroup group={elt[subGroupName]} />);
-
-			countError = group.map(
-				elt =>
-					elt.errors.length +
-					elt[subGroupName].reduce((acc, curr) => acc + curr.errors.length, 0)
-			);
-		} else {
-			countError = group.map(elt => elt.errors.length);
 		}
 
 		content = group.map((elt, idx) => (
@@ -34,7 +25,7 @@ export default function ResultGroup(props) {
 				<input id={elt.name} className="collapsible-header" type="checkbox" />
 				<label htmlFor={elt.name} className="collapsible-header-label">
 					{' '}
-					{`${elt.name} (${countError[idx]})`}{' '}
+					{`${elt.name} (${elt.countErrors}|${elt.countWarn})`}{' '}
 				</label>{' '}
 				<div className="collapsible-content">
 					<ErrorList list={elt.errors} /> {subGroups[idx]}{' '}

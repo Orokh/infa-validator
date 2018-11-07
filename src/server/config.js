@@ -22,7 +22,7 @@ module.exports = Object.freeze({
 		UNION: 'Union Transformation',
 		UPDATE: 'Update Strategy',
 		INPUT: 'Input Transformation',
-		MAPPLET: 'MAPPLET'
+		MAPPLET: 'Mapplet'
 	},
 	SEVERITY: {
 		ERROR: 2,

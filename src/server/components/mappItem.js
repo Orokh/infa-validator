@@ -32,6 +32,7 @@ class MappItemValidator {
 			);
 		}
 
+		// Trim errors
 		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
 
 		result = {
@@ -47,10 +48,6 @@ class MappItemValidator {
 				transformations = mappItem.TRANSFORMATION.filter(
 					elt => elt.$.TYPE !== config.OBJECT_TYPE.MAPPLET
 				);
-
-				if (transformations.length !== mappItem.TRANSFORMATION.length) {
-					console.log('item removed');
-				}
 			} else {
 				transformations = mappItem.TRANSFORMATION.slice();
 			}

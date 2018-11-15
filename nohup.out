@@ -1,0 +1,91 @@
+
+> simple-react-full-stack@1.0.0 dev C:\users\e0201865\Documents\p5\infa-validator-node
+> concurrently "npm run server" "npm run client"
+
+[0] 
+[0] > simple-react-full-stack@1.0.0 server C:\users\e0201865\Documents\p5\infa-validator-node
+[0] > nodemon src/server/index.js
+[0] 
+[1] 
+[1] > simple-react-full-stack@1.0.0 client C:\users\e0201865\Documents\p5\infa-validator-node
+[1] > webpack-dev-server --mode development --devtool inline-source-map --hot
+[1] 
+[0] [33m[nodemon] 1.18.4[39m
+[0] [33m[nodemon] to restart at any time, enter `rs`[39m
+[0] [33m[nodemon] watching: C:\users\e0201865\Documents\p5\infa-validator-node\src\server/**/*[39m
+[0] [32m[nodemon] starting `node src/server/index.js`[39m
+[0] module.js:549
+[0]     throw err;
+[0]     ^
+[0] 
+[0] Error: Cannot find module './api'
+[0]     at Function.Module._resolveFilename (module.js:547:15)
+[0]     at Function.Module._load (module.js:474:25)
+[0]     at Module.require (module.js:596:17)
+[0]     at require (internal/module.js:11:18)
+[0]     at Object.<anonymous> (C:\users\e0201865\Documents\p5\infa-validator-node\src\server\index.js:16:1)
+[0]     at Module._compile (module.js:652:30)
+[0]     at Object.Module._extensions..js (module.js:663:10)
+[0]     at Module.load (module.js:565:32)
+[0]     at tryModuleLoad (module.js:505:12)
+[0]     at Function.Module._load (module.js:497:3)
+[0] [31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[1] clean-webpack-plugin: C:\users\e0201865\Documents\p5\infa-validator-node\dist has been removed.
+[1] [34mi[39m [90m｢wds｣[39m: Project is running at [1m[34mhttp://localhost:3000/[39m[22m
+[1] [34mi[39m [90m｢wds｣[39m: webpack output is served from [1m[34m/[39m[22m
+[1] [34mi[39m [90m｢wdm｣[39m: wait until bundle finished: /
+[1] [34mi[39m [90m｢wdm｣[39m: Hash: [1mfb94609d5ede2f71b005[39m[22m
+[1] Version: webpack [1m4.20.2[39m[22m
+[1] Time: [1m7360[39m[22mms
+[1] Built at: 2018-11-15 [1m14:34:24[39m[22m
+[1]       [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+[1]   [1m[32mbundle.js[39m[22m   2.93 MiB    [1mmain[39m[22m  [1m[32m[emitted][39m[22m  main
+[1] [1m[32mfavicon.ico[39m[22m    101 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+[1]  [1m[32mindex.html[39m[22m  865 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+[1] Entrypoint [1mmain[39m[22m = [1m[32mbundle.js[39m[22m
+[1] [./node_modules/loglevel/lib/loglevel.js] [1mC:/Users/E0201865/Documents/p5/infa-validator-node/node_modules/loglevel/lib/loglevel.js[39m[22m 7.68 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [[1m./node_modules/react/index.js[39m[22m] 190 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack-dev-server/client/index.js?http://localhost:3000] [1m(webpack)-dev-server/client?http://localhost:3000[39m[22m 7.78 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack-dev-server/client/overlay.js] [1m(webpack)-dev-server/client/overlay.js[39m[22m 3.58 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack-dev-server/client/socket.js] [1m(webpack)-dev-server/client/socket.js[39m[22m 1.05 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack-dev-server/node_modules/strip-ansi/index.js] [1m(webpack)-dev-server/node_modules/strip-ansi/index.js[39m[22m 161 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack/hot sync ^\.\/log$] [1m(webpack)/hot sync nonrecursive ^\.\/log$[39m[22m 170 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack/hot/dev-server.js] [1m(webpack)/hot/dev-server.js[39m[22m 1.61 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack/hot/emitter.js] [1m(webpack)/hot/emitter.js[39m[22m 77 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [0] [1mmulti (webpack)-dev-server/client?http://localhost:3000 (webpack)/hot/dev-server.js ./src/client/index.js[39m[22m 52 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack/hot/log-apply-result.js] [1m(webpack)/hot/log-apply-result.js[39m[22m 1.27 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [./node_modules/webpack/hot/log.js] [1m(webpack)/hot/log.js[39m[22m 1.11 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [[1m./src/client/App.js[39m[22m] 4.29 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [[1m./src/client/data/formModel.json[39m[22m] 2.79 KiB {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1] [[1m./src/client/index.js[39m[22m] 236 bytes {[1m[33mmain[39m[22m}[1m[32m [built][39m[22m
+[1]     + 45 hidden modules
+[1] Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+[1]      1 asset
+[1]     Entrypoint [1mundefined[39m[22m = [1m[32mindex.html[39m[22m
+[1]     [[1m./node_modules/html-webpack-plugin/lib/loader.js!./public/index.html[39m[22m] 977 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[1]     [[1m./node_modules/lodash/lodash.js[39m[22m] 527 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[1]     [[1m./node_modules/webpack/buildin/global.js[39m[22m] 509 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[1]     [[1m./node_modules/webpack/buildin/module.js[39m[22m] 519 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[1] [34mi[39m [90m｢wdm｣[39m: Compiled successfully.
+[1] [HPM] Error occurred while trying to proxy request /api/file/upload from localhost:3000 to http://localhost:8080 (ECONNREFUSED) (https://nodejs.org/api/errors.html#errors_common_system_errors)
+[1] npm ERR! code ELIFECYCLE
+[1] npm ERR! errno 1
+[1] npm ERR! simple-react-full-stack@1.0.0 client: `webpack-dev-server --mode development --devtool inline-source-map --hot`
+[1] npm ERR! Exit status 1
+[1] npm ERR! 
+npm ERR! Failed at the simple-react-full-stack@1.0.0 client script.
+[1] npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+[1] 
+[1] npm ERR! A complete log of this run can be found in:
+[1] npm ERR!     C:\Users\E0201865\AppData\Roaming\npm-cache\_logs\2018-11-15T13_44_01_588Z-debug.log
+[1] npm run client exited with code 1
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! simple-react-full-stack@1.0.0 dev: `concurrently "npm run server" "npm run client"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the simple-react-full-stack@1.0.0 dev script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\E0201865\AppData\Roaming\npm-cache\_logs\2018-11-15T13_44_05_693Z-debug.log

@@ -26,7 +26,7 @@ export default class App extends Component {
 			body: JSON.stringify(model)
 		};
 
-		fetch('/api/validate', sentData)
+		fetch('/api/file/validate', sentData)
 			.then(response => response.json())
 			.then(jsonData => this.setState(jsonData))
 			.catch(err => alert('There was a problem during validation: ', err.message));

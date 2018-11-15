@@ -1,4 +1,5 @@
 .vscode
+.tern-port
 node_modules
 dist
 *.log

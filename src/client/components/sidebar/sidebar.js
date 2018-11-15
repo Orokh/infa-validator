@@ -67,7 +67,7 @@ export default class SideBar extends React.Component {
 				body: JSON.stringify(fileID)
 			};
 
-			fetch(`/api/delete/${fileID}`, sentData)
+			fetch(`/api/file/delete/${fileID}`, sentData)
 				.then(response => response.json())
 				.then(data => console.log(data));
 		}
@@ -100,7 +100,7 @@ export default class SideBar extends React.Component {
 			body: JSON.stringify(data)
 		};
 
-		fetch('/api/upload', sentData)
+		fetch('/api/file/upload', sentData)
 			.then(response => response.json())
 			.then(d =>
 				this.setState(

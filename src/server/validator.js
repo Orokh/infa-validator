@@ -15,7 +15,7 @@ class Validator {
 
 		try {
 			// Read XML extract to be validated
-			const srcFileContent = fs.readFileSync(`${__dirname}/public/${fileID}`, 'utf-8');
+			const srcFileContent = fs.readFileSync(`${__dirname}/api/storage/${fileID}`, 'utf-8');
 			parser.parseString(srcFileContent, (err, result) => {
 				repoStructure = result;
 			});

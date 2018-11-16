@@ -14,4 +14,8 @@ app.use(
 
 require('./api/file')(app);
 
+require('./api/folder')(app);
+require('./api/object')(app);
+require('./api/result')(app);
+
 app.listen(8080, () => console.log('Listening on port 8080!'));

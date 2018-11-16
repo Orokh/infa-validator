@@ -54,10 +54,16 @@ module.exports = Object.freeze({
 		'Union Transformation'
 	],
 	TRANS_MUST_NOT_LINK: ['Aggregator', 'Expression', 'Filter', 'Router', 'SORTER', 'UPDATE'],
-	aws_table_names: ['Folder', 'Object', 'Result'],
+	aws_table_names: {
+		FOLDER: 'Folder',
+		OBJECT: 'Object',
+		RESULT: 'Result'
+	},
 	aws_local_config: {
 		region: 'local',
 		endpoint: 'http://localhost:3333'
 	},
-	aws_remote_config: {}
+	aws_remote_config: {
+		region: 'eu-west-3'
+	}
 });

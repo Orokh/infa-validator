@@ -4,4 +4,4 @@ node_modules
 dist
 *.log
 yarn.lock
-/src/server/public/
+/src/server/api/storage/*

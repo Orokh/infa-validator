@@ -148,20 +148,6 @@ export default class SideBar extends React.Component {
 				id="sideNav"
 				className="w3-sidebar w3-collapse w3-animate-left w3-white w3-border-right w3-border-grey w3-card-2"
 			>
-				<div className="w3-padding w3-padding w3-row-padding w3-theme-dark w3-large w3-hide-medium w3-hide-small">
-					<i className="material-icons w3-padding-right"> bug_report </i>{' '}
-					<span className="txt-normal"> Informatica Validator </span>{' '}
-				</div>{' '}
-				<div>
-					<button
-						type="button"
-						onClick={UIActions.toggleNav}
-						className="w3-button w3-hover-none w3-right w3-small w3-hide-large w3-hover-text-red"
-					>
-						{' '}
-						×{' '}
-					</button>{' '}
-				</div>{' '}
 				<form id="sideNavForm">
 					<FileInput
 						id="file-input"

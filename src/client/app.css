@@ -6,12 +6,19 @@ body {
 }
 
 #header {
-	z-index: 5;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
 }
 
 #sideNav {
+	padding-top: 50px;
 	width: 300px;
 	top: 0px;
+}
+
+#resultContent {
+	padding-top: 40px;
 }
 
 .hidden-input {

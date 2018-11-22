@@ -45,7 +45,7 @@ export default class App extends Component {
 						this.onSubmit(model);
 					}}
 				/>{' '}
-				<div id="resultContent" className="w3-main">
+				<div className="w3-main contentWithSidebar">
 					<div className="w3-container">
 						<ResultDisplay result={folders} />{' '}
 					</div>{' '}

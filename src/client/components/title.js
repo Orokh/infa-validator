@@ -11,13 +11,16 @@ function Title() {
 			>
 				<i className="material-icons w3-large"> menu </i>{' '}
 			</button>{' '}
-			<span className="w3-right w3-large w3-padding">
-				<i className="material-icons w3-left w3-xlarge"> bug_report </i>{' '}
-				<span className="w3-hide-small w3-padding-left txt-normal">
-					{' '}
-					Informatica Validator{' '}
-				</span>{' '}
+			<span className="w3-left w3-large w3-padding w3-hover-red">
+				<a className="w3-padding-left" href="/">
+					<i className="material-icons w3-left w3-large"> bug_report </i>{' '}
+					<span className="w3-hide-small w3-medium"> Informatica Validator </span>{' '}
+				</a>{' '}
 			</span>{' '}
+			<a href="/dashboard.html" className="w3-button w3-theme-dark w3-hover-red w3-large">
+				{' '}
+				<span className="w3-medium"> Dashboard </span>{' '}
+			</a>{' '}
 		</div>
 	);
 }

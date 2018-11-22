@@ -15,9 +15,11 @@
 	"dependencies": {
 		"aws-sdk": "^2.356.0",
 		"body-parser": "^1.18.3",
+		"chart.js": "^2.7.3",
 		"express": "^4.16.3",
 		"prop-types": "^15.6.2",
 		"react": "^16.5.2",
+		"react-chartjs-2": "^2.7.4",
 		"react-dom": "^16.5.2",
 		"xml2js": "^0.4.19"
 	},

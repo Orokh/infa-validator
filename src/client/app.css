@@ -17,7 +17,7 @@ body {
 	top: 0px;
 }
 
-#resultContent {
+.w3-main {
 	padding-top: 40px;
 }
 
@@ -82,11 +82,15 @@ body {
 }
 
 .material-icons {
-	vertical-align: -14%;
+	vertical-align: -19%;
 }
 
-#resultContent {
+.contentWithSidebar {
 	margin-left: 300px;
+}
+
+.chartContent {
+	max-height: 400px;
 }
 
 .loader {
@@ -109,6 +113,10 @@ body {
 	100% {
 		transform: rotate(360deg);
 	}
+}
+
+a {
+	text-decoration: none;
 }
 
 /* .icon-alert {

@@ -5,10 +5,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const outputDirectory = 'dist';
 
 module.exports = {
-	entry: './src/client/index.js',
+	entry: {
+		main: './src/client/index.js',
+		dashboard: './src/client/dashboard.js'
+	},
 	output: {
 		path: path.join(__dirname, outputDirectory),
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
 	},
 	module: {
 		rules: [
@@ -39,8 +42,20 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin([outputDirectory]),
 		new HtmlWebpackPlugin({
+			hash: true,
+			title: 'Informatica Validator',
 			template: './public/index.html',
-			favicon: './public/favicon.ico'
+			favicon: './public/favicon.ico',
+			filename: './index.html',
+			chunks: ['main']
+		}),
+		new HtmlWebpackPlugin({
+			hash: true,
+			title: 'Informatica Validator - Dashboard',
+			template: './public/index.html',
+			favicon: './public/favicon.ico',
+			filename: './dashboard.html',
+			chunks: ['dashboard']
 		})
 	]
 };

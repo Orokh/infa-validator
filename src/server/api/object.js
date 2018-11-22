@@ -16,12 +16,11 @@ const defaultParams = {
 };
 
 module.exports = app => {
-	// Get all folders
 	app.get('/api/object', (req, res) => {
 		const { folderName, name } = req.query;
 
 		if (folderName) {
-			// Get a single item, based on folder and name
+			// Get a list of object, based on folder and name
 			const expression = `#f = :f ${name ? 'and #n = :n' : ''}`;
 
 			const params = {
@@ -74,7 +73,7 @@ module.exports = app => {
 					res.send({
 						success: true,
 						message: 'Objects list',
-						folders: Items
+						objects: Items
 					});
 				}
 			});

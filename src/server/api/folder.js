@@ -24,16 +24,19 @@ module.exports = app => {
 			// Get a single folder
 			const params = {
 				...defaultParams,
-				KeyConditionExpression: '#n = :n',
-				ExpressionAttributeNames: {
-					'#n': 'name'
-				},
-				ExpressionAttributeValues: {
-					':n': name
+				Key: {
+					name
 				}
+				// KeyConditionExpression: '#n = :n',
+				// ExpressionAttributeNames: {
+				// 	'#n': 'name'
+				// },
+				// ExpressionAttributeValues: {
+				// 	':n': name
+				// }
 			};
 
-			docClient.query(params, (err, data) => {
+			docClient.get(params, (err, data) => {
 				if (err) {
 					console.log(err);
 					res.send({
@@ -45,7 +48,7 @@ module.exports = app => {
 					res.send({
 						success: true,
 						message: 'Loaded folder',
-						folder: Items
+						folders: Items
 					});
 				}
 			});

@@ -13,7 +13,7 @@ function FormComponent(props) {
 	return (
 		<div id={id} key={id} className="w3-row w3-margin-top w3-padding-bottom w3-margin-bottom">
 			{' '}
-			<label key={`l${id}`} htmlFor={id}>
+			<label key={`l${id}`} htmlFor={`i${id}`}>
 				{' '}
 				<span className="w3-half"> {label} </span>{' '}
 			</label>{' '}

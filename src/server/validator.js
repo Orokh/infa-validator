@@ -100,7 +100,8 @@ class Validator {
 		const params = {
 			TableName: config.aws_table_names.RESULT,
 			Item: {
-				id: `${folderName}#${object.name}`,
+				folderName: `${folderName}`,
+				objectReviewDate: `${object.name}#${this.reviewDate.toISOString()}`,
 				reviewDate: this.reviewDate.toISOString(),
 				countErrors: object.countErrors,
 				countWarn: object.countWarn

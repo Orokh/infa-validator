@@ -13,6 +13,7 @@
 	"author": "Guillaume Kaiffer",
 	"license": "ISC",
 	"dependencies": {
+		"@babel/core": "^7.1.6",
 		"aws-sdk": "^2.363.0",
 		"babel-loader": "^8.0.0",
 		"body-parser": "^1.18.3",
@@ -29,7 +30,6 @@
 		"xml2js": "^0.4.19"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.1.6",
 		"@babel/plugin-proposal-class-properties": "^7.0.0",
 		"@babel/preset-env": "^7.1.6",
 		"@babel/preset-react": "^7.0.0",

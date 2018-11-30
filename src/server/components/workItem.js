@@ -29,7 +29,9 @@ class WorkItemValidator {
 
 		// Instances
 		if (workItem.TASKINSTANCE) {
-			result.errors.push(...workItem.TASKINSTANCE.map(e => this.checkTaskInstance(e)));
+			result.errors.push(
+				...workItem.TASKINSTANCE.map(e => WorkItemValidator.checkTaskInstance(e))
+			);
 		}
 
 		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
@@ -79,7 +81,7 @@ class WorkItemValidator {
 		return result;
 	}
 
-	checkTaskInstance(task) {
+	static checkTaskInstance(task) {
 		let result = {};
 
 		if (
@@ -87,12 +89,9 @@ class WorkItemValidator {
 			(task.$.TASKTYPE.toUpperCase() === 'SESSION' ||
 				task.$.TASKTYPE.toUpperCase() === 'WORKLET')
 		) {
-			if (
-				this.params.WARNING_ENABLED === true &&
-				task.$.FAIL_PARENT_IF_INSTANCE_FAILS !== 'YES'
-			) {
+			if (task.$.FAIL_PARENT_IF_INSTANCE_FAILS !== 'YES') {
 				result = {
-					severity: config.SEVERITY.WARNING,
+					severity: config.SEVERITY.ERROR,
 					text: `Failure management invalid: ${task.$.NAME}`
 				};
 			}

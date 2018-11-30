@@ -119,6 +119,32 @@ a {
 	text-decoration: none;
 }
 
+.badge {
+	display: inline-block;
+	padding: 0.25em 0.4em;
+	font-size: 75%;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	position: relative;
+	top: -1px;
+	padding-right: 0.6em;
+	padding-left: 0.6em;
+	border-radius: 10rem;
+}
+
+.bg-warn:not(:empty) {
+	color: #212529;
+	background-color: #ff9800;
+}
+
+.bg-error:not(:empty) {
+	color: #fff;
+	background-color: #f44336;
+}
+
 /* .icon-alert {
 	font-size: 22px;
 	float: left;

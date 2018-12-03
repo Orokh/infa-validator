@@ -22,7 +22,7 @@ class MappItemValidator {
 		const fromLinks = [];
 		const toLinks = [];
 
-		let result = {
+		const result = {
 			name,
 			errors: [],
 			transformations: []
@@ -45,24 +45,16 @@ class MappItemValidator {
 			);
 		}
 
-		result = common.cleanResult(result, this.params);
-
 		// Transformations
 		if (mappItem.TRANSFORMATION) {
-			const transformations = this.cleanTransformations(mappItem.TRANSFORMATION);
+			const transformations = this.cleanTransList(mappItem.TRANSFORMATION);
 
 			result.transformations = transformations.map(e =>
 				this.checkTransformation(e, fromLinks, toLinks)
 			);
-
-			result.countErrors += result.transformations.reduce(
-				(agg, elt) => agg + elt.countErrors,
-				0
-			);
-			result.countWarn += result.transformations.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
-		return result;
+		return common.cleanResult(result, this.params);
 	}
 
 	cleanTransList(transformations) {

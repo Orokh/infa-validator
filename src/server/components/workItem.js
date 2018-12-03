@@ -11,7 +11,7 @@ class WorkItemValidator {
 	}
 
 	validate(workItem) {
-		let result = {
+		const result = {
 			name: workItem.$.NAME,
 			errors: [],
 			sessions: []
@@ -34,17 +34,12 @@ class WorkItemValidator {
 			);
 		}
 
-		result = common.cleanResult(result, this.params);
-
 		// Sessions
 		if (workItem.SESSION) {
 			result.sessions = workItem.SESSION.map(e => this.sessionValidator.validate(e));
-
-			result.countErrors += result.sessions.reduce((agg, elt) => agg + elt.countErrors, 0);
-			result.countWarn += result.sessions.reduce((agg, elt) => agg + elt.countWarn, 0);
 		}
 
-		return result;
+		return common.cleanResult(result, this.params);
 	}
 
 	static checkAttribute(attr, wfName) {

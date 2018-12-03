@@ -27,13 +27,6 @@ module.exports = app => {
 				Key: {
 					name
 				}
-				// KeyConditionExpression: '#n = :n',
-				// ExpressionAttributeNames: {
-				// 	'#n': 'name'
-				// },
-				// ExpressionAttributeValues: {
-				// 	':n': name
-				// }
 			};
 
 			docClient.get(params, (err, data) => {

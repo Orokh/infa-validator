@@ -15,6 +15,23 @@ const defaultParams = {
 	TableName: config.aws_table_names.RESULT
 };
 
+function aggrResult(acc, elt) {
+	const findIndex = acc.findIndex(searchElt => searchElt.reviewDate === elt.reviewDate);
+
+	if (findIndex === -1) {
+		acc.push({
+			reviewDate: elt.reviewDate,
+			countWarn: elt.countWarn,
+			countErrors: elt.countErrors
+		});
+	} else {
+		acc[findIndex].countWarn += elt.countWarn;
+		acc[findIndex].countErrors += elt.countErrors;
+	}
+
+	return acc;
+}
+
 module.exports = app => {
 	// Get all folders
 	app.get('/api/result', (req, res) => {
@@ -22,7 +39,6 @@ module.exports = app => {
 
 		if (folderName && objectName) {
 			// Get a single item, based on folder and name
-
 			const params = {
 				...defaultParams,
 				KeyConditionExpression: `folderName = :folderName and begins_with(objectReviewDate, :objectName)`,
@@ -67,24 +83,7 @@ module.exports = app => {
 				} else {
 					const { Items } = data;
 
-					const resItems = Items.reduce((acc, elt) => {
-						const findIndex = acc.findIndex(
-							searchElt => searchElt.reviewDate === elt.reviewDate
-						);
-
-						if (findIndex === -1) {
-							acc.push({
-								reviewDate: elt.reviewDate,
-								countWarn: 0,
-								countErrors: 0
-							});
-						} else {
-							acc[findIndex].countWarn += elt.countWarn;
-							acc[findIndex].countErrors += elt.countErrors;
-						}
-
-						return acc;
-					}, []);
+					const resItems = Items.reduce(aggrResult, []);
 
 					res.send({
 						success: true,
@@ -116,36 +115,5 @@ module.exports = app => {
 				}
 			});
 		}
-	});
-
-	app.post('/api/result', (req, res) => {
-		const { folderName, objectName, reviewDate, cntError, cntWarn } = req.body;
-
-		const params = {
-			...defaultParams,
-			Item: {
-				id: `${folderName}#${objectName}`,
-				reviewDate,
-				cntError,
-				cntWarn
-			}
-		};
-
-		docClient.put(params, (err, data) => {
-			if (err) {
-				console.log(err);
-				res.send({
-					success: false,
-					message: `Error: ${err.message}`
-				});
-			} else {
-				const { Items } = data;
-				res.send({
-					success: true,
-					message: 'Created object',
-					result: JSON.stringify(Items)
-				});
-			}
-		});
 	});
 };

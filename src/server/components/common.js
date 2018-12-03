@@ -86,12 +86,25 @@ function trimErrors(errors, params) {
 function cleanResult(result, params) {
 	let newRes = result;
 
-	newRes.errors = trimErrors(result.errors, params);
+	if (result.errors) {
+		newRes.errors = trimErrors(result.errors, params);
 
-	newRes = {
-		...newRes,
-		...getCount(newRes.errors)
-	};
+		newRes = {
+			...newRes,
+			...getCount(newRes.errors)
+		};
+	}
+
+	const itemsLists = Object.keys(result).filter(
+		elt => elt !== 'name' && elt !== 'errors' && result[elt].length > 0
+	);
+
+	if (itemsLists.length > 0) {
+		itemsLists.forEach(elt => {
+			newRes.countErrors += result[elt].reduce((agg, curr) => agg + curr.countErrors, 0);
+			newRes.countWarn += result[elt].reduce((agg, curr) => agg + curr.countWarn, 0);
+		});
+	}
 
 	return newRes;
 }

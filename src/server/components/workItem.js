@@ -4,10 +4,10 @@ const SessionValidator = require('./session');
 
 class WorkItemValidator {
 	constructor(type, params) {
-		this.type = type;
+		this.type = type.name;
 		this.params = params;
 
-		this.sessionValidator = new SessionValidator(this.params);
+		this.sessionValidator = new SessionValidator(config.OBJECTS.SESSION, this.params);
 	}
 
 	validate(workItem) {
@@ -18,12 +18,12 @@ class WorkItemValidator {
 		};
 
 		// Naming convention
-		result.errors.push(common.checkName(workItem.$.NAME, this.type, this.params));
+		result.errors.push(common.checkObjectName(workItem.$.NAME, this.type, this.params));
 
 		// Attributes
 		if (workItem.ATTRIBUTE) {
 			result.errors.push(
-				...workItem.ATTRIBUTE.map(e => this.checkAttribute(e, workItem.$.NAME))
+				...workItem.ATTRIBUTE.map(e => WorkItemValidator.checkAttribute(e, workItem.$.NAME))
 			);
 		}
 
@@ -34,12 +34,7 @@ class WorkItemValidator {
 			);
 		}
 
-		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
-
-		result = {
-			...result,
-			...common.getCount(result.errors)
-		};
+		result = common.cleanResult(result, this.params);
 
 		// Sessions
 		if (workItem.SESSION) {
@@ -52,12 +47,15 @@ class WorkItemValidator {
 		return result;
 	}
 
-	checkAttribute(attr, wfName) {
+	static checkAttribute(attr, wfName) {
 		let result = {};
 
-		switch (attr.$.NAME) {
+		const name = attr.$.NAME;
+		const value = attr.$.VALUE;
+
+		switch (name) {
 			case 'Write Backward Compatible Workflow Log File':
-				if (this.params.WARNING_ENABLED === true && attr.$.VALUE !== 'YES') {
+				if (value !== 'YES') {
 					result = {
 						severity: config.SEVERITY.WARNING,
 						text: 'Backward logs disabled'
@@ -65,7 +63,7 @@ class WorkItemValidator {
 				}
 				break;
 			case 'Workflow Log File Name':
-				if (this.params.WARNING_ENABLED === true && wfName !== attr.$.VALUE.split('.')[0]) {
+				if (wfName !== value.split('.')[0]) {
 					result = {
 						severity: config.SEVERITY.WARNING,
 						text: 'Badly named log file'

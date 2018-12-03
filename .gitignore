@@ -5,5 +5,4 @@ dist
 *.log
 yarn.lock
 package-lock.json
-/src/server/api/storage/*
-/.forever/*
+src/server/api/storage/*

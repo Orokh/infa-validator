@@ -1,12 +1,12 @@
 const config = require('../config');
 
-function checkName(name, type, params) {
-	if (!name || !type || !params) {
-		throw new Error(`All parameters are required ${name}, ${type}, ${params}`);
+function checkName(name, category, type, params) {
+	if (!name || !category || !type || !params) {
+		throw new Error(`All parameters are required (${name}, ${type}, ${params})`);
 	}
 
 	let result = {};
-	const targetNaming = params.NAMING[type.toUpperCase()];
+	const targetNaming = params.NAMING[category][type.toUpperCase()].default;
 	const splitName = targetNaming.split('|');
 
 	if (!splitName.some(e => name.startsWith(`${e}_`))) {
@@ -17,6 +17,18 @@ function checkName(name, type, params) {
 	}
 
 	return result;
+}
+
+function checkObjectName(name, type, params) {
+	return checkName(name, 'OBJECTS', type, params);
+}
+
+function checkTransName(name, type, params) {
+	return checkName(name, 'TRANSFORMATIONS', type, params);
+}
+
+function checkFieldName(name, type, params) {
+	return checkName(name, 'FIELDS', type, params);
 }
 
 function checkDescription(description, params) {
@@ -61,6 +73,31 @@ function getCount(errors) {
 	return resCount;
 }
 
-module.exports.checkName = checkName;
+function trimErrors(errors, params) {
+	let result = errors.filter(elt => Object.keys(elt).length !== 0);
+
+	if (!params.WARNING_ENABLED) {
+		result = result.filter(elt => elt.severity === config.SEVERITY.ERROR);
+	}
+
+	return result;
+}
+
+function cleanResult(result, params) {
+	let newRes = result;
+
+	newRes.errors = trimErrors(result.errors, params);
+
+	newRes = {
+		...newRes,
+		...getCount(newRes.errors)
+	};
+
+	return newRes;
+}
+
 module.exports.checkDescription = checkDescription;
-module.exports.getCount = getCount;
+module.exports.checkObjectName = checkObjectName;
+module.exports.checkTransName = checkTransName;
+module.exports.checkFieldName = checkFieldName;
+module.exports.cleanResult = cleanResult;

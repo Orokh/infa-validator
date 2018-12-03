@@ -7,14 +7,14 @@ const common = require('./common');
 
 class FolderValidator {
 	constructor(params) {
-		this.type = config.OBJECT_TYPE.FOLDER;
+		this.type = config.OBJECTS.FOLDER;
 		this.params = params;
 
-		this.workflowValidator = new WorkItemValidator(config.OBJECT_TYPE.WORKFLOW, this.params);
-		this.workletValidator = new WorkItemValidator(config.OBJECT_TYPE.WORKLET, this.params);
-		this.sessionValidator = new SessionValidator(this.params);
-		this.mappingValidator = new MappItemValidator(config.OBJECT_TYPE.MAPPING, this.params);
-		this.mappletValidator = new MappItemValidator(config.OBJECT_TYPE.MAPPLET, this.params);
+		this.workflowValidator = new WorkItemValidator(config.OBJECTS.WORKFLOW, this.params);
+		this.workletValidator = new WorkItemValidator(config.OBJECTS.WORKLET, this.params);
+		this.sessionValidator = new SessionValidator(config.OBJECTS.SESSION, this.params);
+		this.mappingValidator = new MappItemValidator(config.OBJECTS.MAPPING, this.params);
+		this.mappletValidator = new MappItemValidator(config.OBJECTS.MAPPLET, this.params);
 	}
 
 	validate(folder) {
@@ -45,7 +45,7 @@ class FolderValidator {
 		}
 
 		if (folder.CONFIG) {
-			result.configs = folder.CONFIG.map(e => FolderValidator.checkConfig(e));
+			result.configs = folder.CONFIG.map(e => this.checkConfig(e));
 
 			result.countErrors += result.configs.reduce((agg, elt) => agg + elt.countErrors, 0);
 			result.countWarn += result.configs.reduce((agg, elt) => agg + elt.countWarn, 0);
@@ -75,8 +75,8 @@ class FolderValidator {
 		return result;
 	}
 
-	static checkConfig(cfgItem) {
-		let result = {
+	checkConfig(cfgItem) {
+		const result = {
 			name: cfgItem.$.NAME,
 			errors: []
 		};
@@ -85,14 +85,7 @@ class FolderValidator {
 			result.errors = cfgItem.ATTRIBUTE.map(e => FolderValidator.checkConfigAttribute(e));
 		}
 
-		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
-
-		result = {
-			...result,
-			...common.getCount(result.errors)
-		};
-
-		return result;
+		return common.cleanResult(result, this.params);
 	}
 
 	static checkConfigAttribute(attr) {

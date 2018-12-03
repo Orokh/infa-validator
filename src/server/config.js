@@ -1,28 +1,111 @@
 module.exports = Object.freeze({
-	OBJECT_TYPE: {
-		FOLDER: 'FOLDER',
-		WORKFLOW: 'WORKFLOW',
-		WORKLET: 'WORKLET',
-		SESSION: 'SESSION',
-		MAPPING: 'MAPPING',
-		AGGREGATOR: 'Aggregator',
-		CUSTOM: 'Custom Transformation',
-		EXPRESSION: 'Expression',
-		FILTER: 'Filter',
-		JOINER: 'Joiner',
-		LOOKUP: 'Lookup Procedure',
-		LOOKUPOW: 'LOOKUPOW',
-		NORMALIZER: 'Normalizer',
-		OUTPUT: 'Output Transformation',
-		ROUTER: 'Router',
-		SEQUENCE: 'Sequence',
-		SORTER: 'Sorter',
-		SQ: 'Source Qualifier',
-		SQOW: 'SQOW',
-		UNION: 'Union Transformation',
-		UPDATE: 'Update Strategy',
-		INPUT: 'Input Transformation',
-		MAPPLET: 'Mapplet'
+	OBJECTS: {
+		FOLDER: {
+			name: 'Folder'
+		},
+		WORKFLOW: {
+			name: 'Workflow'
+		},
+		WORKLET: {
+			name: 'Worklet'
+		},
+		SESSION: {
+			name: 'Session'
+		},
+		MAPPING: {
+			name: 'Mapping'
+		},
+		MAPPLET: {
+			name: 'Mapplet'
+		}
+	},
+	TRANSFORMATIONS: {
+		AGGREGATOR: {
+			name: 'Aggregator',
+			checkFieldName: true,
+			checkConnectors: true
+		},
+		CUSTOM: {
+			name: 'Custom Transformation',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		EXPRESSION: {
+			name: 'Expression',
+			checkFieldName: true,
+			checkConnectors: true
+		},
+		FILTER: {
+			name: 'Filter',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		INPUT: {
+			name: 'Input Transformation',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		JOINER: {
+			name: 'Joiner',
+			checkFieldName: true,
+			checkConnectors: true
+		},
+		LOOKUP: {
+			name: 'Lookup Procedure',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		MAPPLET: {
+			name: 'Mapplet',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		NORMALIZER: {
+			name: 'Normalizer',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		OUTPUT: {
+			name: 'Output Transformation',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		ROUTER: {
+			name: 'Router',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		SEQUENCE: {
+			name: 'Sequence',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		SORTER: {
+			name: 'Sorter',
+			checkFieldName: true,
+			checkConnectors: true
+		},
+		SOURCE: {
+			name: 'Source Qualifier',
+			checkFieldName: true,
+			checkConnectors: true
+		},
+		UNION: {
+			name: 'Union Transformation',
+			checkFieldName: false,
+			checkConnectors: false
+		},
+		UPDATE: {
+			name: 'Update Strategy',
+			checkFieldName: true,
+			checkConnectors: true
+		}
+	},
+	FIELDS: {
+		IO: 'INPUT/OUTPUT',
+		INPUT: 'INPUT',
+		OUTPUT: 'OUTPUT',
+		VARIABLE: 'LOCAL VARIABLE'
 	},
 	SEVERITY: {
 		ERROR: 2,
@@ -30,30 +113,6 @@ module.exports = Object.freeze({
 		NONE: 0,
 		INFO: -1
 	},
-	EXCLUDE_TRANS_NAME: [
-		'Custom Transformation',
-		'Filter',
-		'Joiner',
-		'Input Transformation',
-		'Lookup Procedure',
-		'Normalizer',
-		'Output Transformation',
-		'Router',
-		'Sequence',
-		'Union Transformation'
-	],
-	EXCLUDE_TRANS_CONNEC: [
-		'CUSTOM',
-		'FILTER',
-		'Input Transformation',
-		'LOOKUP',
-		'MAPPLET',
-		'Output Transformation',
-		'Router',
-		'Sequence',
-		'Union Transformation'
-	],
-	TRANS_MUST_NOT_LINK: ['Aggregator', 'Expression', 'Filter', 'Router', 'SORTER', 'UPDATE'],
 	aws_table_names: {
 		FOLDER: 'Folder',
 		OBJECT: 'Object',

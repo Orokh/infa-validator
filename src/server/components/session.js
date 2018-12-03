@@ -2,13 +2,13 @@ const config = require('../config');
 const common = require('./common');
 
 class SessionValidator {
-	constructor(params) {
-		this.type = config.OBJECT_TYPE.SESSION;
+	constructor(type, params) {
+		this.type = type.name;
 		this.params = params;
 	}
 
 	validate(session) {
-		let result = {
+		const result = {
 			name: session.$.NAME,
 			errors: []
 		};
@@ -36,19 +36,12 @@ class SessionValidator {
 			result.errors.push(...session.ATTRIBUTE.map(e => this.checkAttribute(e)));
 		}
 
-		result.errors = result.errors.filter(e => Object.keys(e).length !== 0);
-
-		result = {
-			...result,
-			...common.getCount(result.errors)
-		};
-
-		return result;
+		return common.cleanResult(result, this.params);
 	}
 
 	checkName(sessionName, mappingName) {
 		// Common check (with naming convention)
-		const commonResult = common.checkName(sessionName, this.type, this.params);
+		const commonResult = common.checkObjectName(sessionName, this.type, this.params);
 
 		// Verify that name matches with mapping
 		let sessionResult = {};

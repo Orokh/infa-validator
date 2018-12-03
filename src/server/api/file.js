@@ -43,30 +43,83 @@ module.exports = app => {
 			WARNING_ENABLED: req.body.showWarning,
 			DESCRIPTION_LEVEL: req.body.descriptionLevel,
 			NAMING: {
-				WORKFLOW: req.body.workflowNaming,
-				WORKLET: req.body.workletNaming,
-				SESSION: req.body.sessionNaming,
-				MAPPING: req.body.mappingNaming,
-				MAPPLET: req.body.mappletNaming,
-				AGGREGATOR: req.body.aggNaming,
-				EXPRESSION: req.body.expNaming,
-				FILTER: req.body.filNaming,
-				'INPUT TRANSFORMATION': req.body.mpltInNaming,
-				JOINER: req.body.jnrNaming,
-				'LOOKUP PROCEDURE': req.body.lkpNaming,
-				LOOKUPOW: req.body.lkpoNaming,
-				NORMALIZER: req.body.nrmNaming,
-				'OUTPUT TRANSFORMATION': req.body.mpltOutNaming,
-				ROUTER: req.body.rtrNaming,
-				SEQUENCE: req.body.seqNaming,
-				'SOURCE QUALIFIER': req.body.sqNaming,
-				SQOW: req.body.sqoNaming,
-				SORTER: req.body.srtNaming,
-				'UNION TRANSFORMATION': req.body.unNaming,
-				'UPDATE STRATEGY': req.body.updNaming,
-				FIELD_INPUT: req.body.inputNaming,
-				FIELD_OUTPUT: req.body.outputNaming,
-				'FIELD_LOCAL VARIABLE': req.body.variableNaming
+				OBJECTS: {
+					WORKFLOW: {
+						default: req.body.workflowNaming
+					},
+					WORKLET: {
+						default: req.body.workletNaming
+					},
+					SESSION: {
+						default: req.body.sessionNaming
+					},
+					MAPPING: {
+						default: req.body.mappingNaming
+					},
+					MAPPLET: {
+						default: req.body.mappletNaming
+					}
+				},
+				TRANSFORMATIONS: {
+					AGGREGATOR: {
+						default: req.body.aggNaming
+					},
+					EXPRESSION: {
+						default: req.body.expNaming
+					},
+					FILTER: {
+						default: req.body.filNaming
+					},
+					'INPUT TRANSFORMATION': {
+						default: req.body.mpltInNaming
+					},
+					JOINER: {
+						default: req.body.jnrNaming
+					},
+					'LOOKUP PROCEDURE': {
+						default: req.body.lkpNaming,
+						override: req.body.lkpoNaming
+					},
+					MAPPLET: {
+						default: req.body.mappletNaming
+					},
+					NORMALIZER: {
+						default: req.body.nrmNaming
+					},
+					'OUTPUT TRANSFORMATION': {
+						default: req.body.mpltOutNaming
+					},
+					ROUTER: {
+						default: req.body.rtrNaming
+					},
+					SEQUENCE: {
+						default: req.body.seqNaming
+					},
+					'SOURCE QUALIFIER': {
+						default: req.body.sqNaming,
+						override: req.body.sqoNaming
+					},
+					SORTER: {
+						default: req.body.srtNaming
+					},
+					'UNION TRANSFORMATION': {
+						default: req.body.unNaming
+					},
+					'UPDATE STRATEGY': {
+						default: req.body.updNaming
+					}
+				},
+				FIELDS: {
+					INPUT: {
+						default: req.body.inputNaming
+					},
+					OUTPUT: {
+						default: req.body.outputNaming
+					},
+					'LOCAL VARIABLE': {
+						default: req.body.variableNaming
+					}
+				}
 			}
 		};
 

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './app.css';
-import Title from './components/title';
+import '../app.css';
+import Title from '../common/title';
 import SideBar from './components/sidebar/sidebar';
-import ResultDisplay from './components/result/resultDisplay';
+import Result from './components/result/result';
 
 export default class App extends Component {
 	static propTypes = {
@@ -47,7 +47,7 @@ export default class App extends Component {
 				/>{' '}
 				<div className="w3-main contentWithSidebar">
 					<div className="w3-container">
-						<ResultDisplay result={folders} />{' '}
+						<Result result={folders} />{' '}
 					</div>{' '}
 				</div>{' '}
 			</div>

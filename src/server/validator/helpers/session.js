@@ -1,4 +1,4 @@
-const config = require('../config');
+const config = require('../../config');
 const common = require('./common');
 
 class SessionValidator {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Bar } from 'react-chartjs-2';
 
-import './app.css';
+import '../app.css';
 
-import Title from './components/title';
-import ItemSelector from './components/dashboard/itemSelector';
+import Title from '../common/title';
+import ItemSelector from './components/itemSelector';
 
 export default class AppDashboard extends Component {
 	constructor(props) {

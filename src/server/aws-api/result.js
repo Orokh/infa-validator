@@ -40,7 +40,7 @@ module.exports = app => {
 		const { folderName, objectName } = req.query;
 
 		if (folderName && objectName) {
-			// Get a single item, based on folder and name
+			// Get results for a single item, based on folder and name
 			const params = {
 				...defaultParams,
 				KeyConditionExpression: `folderName = :folderName and begins_with(objectReviewDate, :objectName)`,
@@ -52,6 +52,7 @@ module.exports = app => {
 
 			docClient.query(params, (err, data) => handlers.handleListResult(err, data, res));
 		} else if (folderName) {
+			// Get results for all objects in a folder, aggregate to reviewDate
 			const params = {
 				...defaultParams,
 				KeyConditionExpression: `folderName = :folderName`,
@@ -64,7 +65,7 @@ module.exports = app => {
 				handlers.handleListResult(err, data, res, aggrResult)
 			);
 		} else {
-			// No param defined, return all objects
+			// No param defined, return all results
 			docClient.scan(defaultParams, (err, data) => handlers.handleListResult(err, data, res));
 		}
 	});

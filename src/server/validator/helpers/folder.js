@@ -1,4 +1,4 @@
-const config = require('../config');
+const config = require('../../config');
 const WorkItemValidator = require('./workItem');
 const SessionValidator = require('./session');
 const MappItemValidator = require('./mappItem');

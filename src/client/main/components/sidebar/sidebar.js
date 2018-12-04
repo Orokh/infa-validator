@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import FileInput from './fileInput';
 import Section from './section';
 
-import UIActions from '../uiActions';
+import UIActions from '../../../common/uiActions';
 
 export default class SideBar extends React.Component {
 	static propTypes = {

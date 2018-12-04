@@ -12,10 +12,10 @@ app.use(
 	})
 );
 
-require('./api/file')(app);
+require('./validator/api')(app);
 
-require('./api/folder')(app);
-require('./api/object')(app);
-require('./api/result')(app);
+require('./aws-api/folder')(app);
+require('./aws-api/object')(app);
+require('./aws-api/result')(app);
 
 app.listen(8080, () => console.log('Listening on port 8080!'));

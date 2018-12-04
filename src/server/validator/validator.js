@@ -2,8 +2,8 @@ const AWS = require('aws-sdk');
 const fs = require('fs');
 const xml2js = require('xml2js');
 
-const config = require('./config');
-const FolderValidator = require('./components/folder');
+const config = require('../config');
+const FolderValidator = require('./helpers/folder');
 
 const isDev = process.env.NODE_ENV !== 'production';
 
@@ -28,7 +28,7 @@ class Validator {
 
 		try {
 			// Read XML extract to be validated
-			const srcFileContent = fs.readFileSync(`${__dirname}/api/storage/${fileID}`, 'utf-8');
+			const srcFileContent = fs.readFileSync(`${__dirname}/storage/${fileID}`, 'utf-8');
 			parser.parseString(srcFileContent, (err, result) => {
 				repoStructure = result;
 			});

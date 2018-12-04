@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import UIActions from '../uiActions';
+import UIActions from '../../../common/uiActions';
 import ResultGroup from './resultGroup';
 import FolderSelector from './folderSelector';
-import Tab from './tab';
+import Tab from '../../../common/tab';
 
-export default class ResultDisplay extends React.Component {
+export default class Result extends React.Component {
 	static propTypes = {
 		result: PropTypes.instanceOf(Object)
 	};

@@ -1,4 +1,4 @@
-const config = require('../config');
+const config = require('../../config');
 
 function checkName(name, category, type, params) {
 	if (!name || !category || !type || !params) {

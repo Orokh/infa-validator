@@ -1,5 +1,5 @@
 const fs = require('fs');
-const Validator = require('../validator');
+const Validator = require('./validator');
 
 module.exports = app => {
 	app.post('/api/file/upload', (req, res) => {

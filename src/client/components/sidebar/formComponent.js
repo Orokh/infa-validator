@@ -24,7 +24,7 @@ function FormComponent(props) {
 				key={`i${id}`}
 				defaultValue={defValue}
 				{...checked}
-				className="w3-half w3-border-0 w3-light-grey"
+				className="w3-half w3-border w3-light-grey"
 				onChange={e => onChange(e, id)}
 			/>{' '}
 		</div>

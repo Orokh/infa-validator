@@ -7,15 +7,11 @@ import ResultItemHeader from './resultItemHeader';
 export default function ResultGroup(props) {
 	const { group } = props;
 
-	const errorList = group.map(elt =>
-		elt.errors.length > 0 ? (
-			<div className="collapsible-content">
-				<ErrorList list={elt.errors} />{' '}
-			</div>
-		) : (
-			''
-		)
-	);
+	const errorList = group.map(elt => (
+		<div className="collapsible-content">
+			<ErrorList list={elt.errors} />{' '}
+		</div>
+	));
 
 	return (
 		<div>

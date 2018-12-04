@@ -27,7 +27,7 @@ export default class AppDashboard extends Component {
 			.then(response => response.json())
 			.then(data =>
 				this.setState({
-					foldersList: data.folders
+					foldersList: data.list
 				})
 			);
 	}
@@ -49,13 +49,13 @@ export default class AppDashboard extends Component {
 				.then(response => response.json())
 				.then(data =>
 					this.setState({
-						objectsList: data.objects
+						objectsList: data.list
 					})
 				);
 
 			fetch(`/api/result?folderName=${e.target.value}`)
 				.then(response => response.json())
-				.then(data => this.defineDataSet(data.results));
+				.then(data => this.defineDataSet(data.list));
 		}
 	}
 
@@ -70,7 +70,7 @@ export default class AppDashboard extends Component {
 
 		fetch(url)
 			.then(response => response.json())
-			.then(data => this.defineDataSet(data.results));
+			.then(data => this.defineDataSet(data.list));
 	}
 
 	defineDataSet(results) {

@@ -1,6 +1,8 @@
 const AWS = require('aws-sdk');
 const config = require('../config.js');
 
+const handlers = require('./handlers.js');
+
 const isDev = process.env.NODE_ENV !== 'production';
 
 if (isDev) {
@@ -20,7 +22,7 @@ module.exports = app => {
 		const { folderName, name } = req.query;
 
 		if (folderName) {
-			// Get a list of object, based on folder and name
+			// Get a list of objects, based on folder and name
 			const expression = `#f = :f ${name ? 'and #n = :n' : ''}`;
 
 			const params = {
@@ -39,74 +41,10 @@ module.exports = app => {
 				params.ExpressionAttributeValues[':n'] = name;
 			}
 
-			docClient.query(params, (err, data) => {
-				if (err) {
-					console.log(err);
-					res.send({
-						success: false,
-						message: `Error: ${err.message}`
-					});
-				} else {
-					const { Items } = data;
-					res.send({
-						success: true,
-						message: 'Loaded objects',
-						objects: Items
-					});
-				}
-			});
+			docClient.query(params, (err, data) => handlers.handleListResult(err, data, res));
 		} else {
-			// No param defined, return all objects
-			const params = {
-				...defaultParams
-			};
-
-			docClient.scan(params, (err, data) => {
-				if (err) {
-					console.log(err);
-					res.send({
-						success: false,
-						message: `Error: ${err.message}`
-					});
-				} else {
-					const { Items } = data;
-					res.send({
-						success: true,
-						message: 'Objects list',
-						objects: Items
-					});
-				}
-			});
+			// Return all objects
+			docClient.scan(defaultParams, (err, data) => handlers.handleListResult(err, data, res));
 		}
-	});
-
-	app.post('/api/object', (req, res) => {
-		const { folderName, name, type } = req.body;
-
-		const params = {
-			...defaultParams,
-			Item: {
-				folderName,
-				name,
-				type
-			}
-		};
-
-		docClient.put(params, (err, data) => {
-			if (err) {
-				console.log(err);
-				res.send({
-					success: false,
-					message: `Error: ${err.message}`
-				});
-			} else {
-				const { Items } = data;
-				res.send({
-					success: true,
-					message: 'Created object',
-					folder: JSON.stringify(Items)
-				});
-			}
-		});
 	});
 };

@@ -1,6 +1,8 @@
 const AWS = require('aws-sdk');
 const config = require('../config.js');
 
+const handlers = require('./handlers.js');
+
 const isDev = process.env.NODE_ENV !== 'production';
 
 if (isDev) {
@@ -48,22 +50,7 @@ module.exports = app => {
 				}
 			};
 
-			docClient.query(params, (err, data) => {
-				if (err) {
-					console.log(err);
-					res.send({
-						success: false,
-						message: `Error: ${err.message}`
-					});
-				} else {
-					const { Items } = data;
-					res.send({
-						success: true,
-						message: 'Loaded objects',
-						results: Items
-					});
-				}
-			});
+			docClient.query(params, (err, data) => handlers.handleListResult(err, data, res));
 		} else if (folderName) {
 			const params = {
 				...defaultParams,
@@ -73,47 +60,12 @@ module.exports = app => {
 				}
 			};
 
-			docClient.query(params, (err, data) => {
-				if (err) {
-					console.log(err);
-					res.send({
-						success: false,
-						message: `Error: ${err.message}`
-					});
-				} else {
-					const { Items } = data;
-
-					const resItems = Items.reduce(aggrResult, []);
-
-					res.send({
-						success: true,
-						message: 'Loaded objects',
-						results: resItems
-					});
-				}
-			});
+			docClient.query(params, (err, data) =>
+				handlers.handleListResult(err, data, res, aggrResult)
+			);
 		} else {
 			// No param defined, return all objects
-			const params = {
-				...defaultParams
-			};
-
-			docClient.scan(params, (err, data) => {
-				if (err) {
-					console.log(err);
-					res.send({
-						success: false,
-						message: `Error: ${err.message}`
-					});
-				} else {
-					const { Items } = data;
-					res.send({
-						success: true,
-						message: 'Objects list',
-						results: Items
-					});
-				}
-			});
+			docClient.scan(defaultParams, (err, data) => handlers.handleListResult(err, data, res));
 		}
 	});
 };

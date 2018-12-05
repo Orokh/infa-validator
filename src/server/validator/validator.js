@@ -43,18 +43,18 @@ class Validator {
 		const content = Validator.getFile(fileID);
 
 		const result = {
-			extract_date: content.POWERMART.$.CREATION_DATE,
+			extractDate: content.POWERMART.$.CREATION_DATE,
 			folders: content.POWERMART.REPOSITORY[0].FOLDER.map(e =>
 				this.folderValidator.validate(e)
 			)
 		};
 
-		result.folders.forEach(elt => this.storeFolder(elt));
+		result.folders.forEach(elt => this.storeFolder(elt, result.extractDate));
 
 		return result;
 	}
 
-	storeFolder(folder) {
+	storeFolder(folder, extractDate) {
 		const params = {
 			TableName: config.aws_table_names.FOLDER,
 			Item: {
@@ -68,12 +68,14 @@ class Validator {
 			}
 		});
 
-		folder.workflows.forEach(elt => this.storeResult(folder.name, elt, 'workflow'));
-		folder.worklets.forEach(elt => this.storeResult(folder.name, elt, 'worklet'));
-		folder.configs.forEach(elt => this.storeResult(folder.name, elt, 'config'));
-		folder.sessions.forEach(elt => this.storeResult(folder.name, elt, 'session'));
-		folder.mappings.forEach(elt => this.storeResult(folder.name, elt, 'mapping'));
-		folder.mapplets.forEach(elt => this.storeResult(folder.name, elt, 'mapplet'));
+		folder.workflows.forEach(elt =>
+			this.storeResult(folder.name, elt, 'workflow', extractDate)
+		);
+		folder.worklets.forEach(elt => this.storeResult(folder.name, elt, 'worklet', extractDate));
+		folder.configs.forEach(elt => this.storeResult(folder.name, elt, 'config', extractDate));
+		folder.sessions.forEach(elt => this.storeResult(folder.name, elt, 'session', extractDate));
+		folder.mappings.forEach(elt => this.storeResult(folder.name, elt, 'mapping', extractDate));
+		folder.mapplets.forEach(elt => this.storeResult(folder.name, elt, 'mapplet', extractDate));
 	}
 
 	storeObject(folderName, object, type) {
@@ -94,7 +96,7 @@ class Validator {
 		});
 	}
 
-	storeResult(folderName, object, type) {
+	storeResult(folderName, object, type, extractDate) {
 		this.storeObject(folderName, object, type);
 
 		const params = {
@@ -104,7 +106,8 @@ class Validator {
 				objectReviewDate: `${object.name}#${this.reviewDate.toISOString()}`,
 				reviewDate: this.reviewDate.toISOString(),
 				countErrors: object.countErrors,
-				countWarn: object.countWarn
+				countWarn: object.countWarn,
+				extractDate
 			}
 		};
 

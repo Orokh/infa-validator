@@ -18,11 +18,11 @@ const defaultParams = {
 };
 
 function aggrResult(acc, elt) {
-	const findIndex = acc.findIndex(searchElt => searchElt.reviewDate === elt.reviewDate);
+	const findIndex = acc.findIndex(searchElt => searchElt.extractDate === elt.extractDate);
 
 	if (findIndex === -1) {
 		acc.push({
-			reviewDate: elt.reviewDate,
+			extractDate: elt.extractDate,
 			countWarn: elt.countWarn,
 			countErrors: elt.countErrors
 		});

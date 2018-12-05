@@ -75,7 +75,7 @@ export default class AppDashboard extends Component {
 
 	defineDataSet(results) {
 		this.setState({
-			labels: results.map(elt => elt.reviewDate),
+			labels: results.map(elt => elt.extractDate),
 			warnValues: results.map(elt => elt.countWarn),
 			errValues: results.map(elt => elt.countErrors)
 		});

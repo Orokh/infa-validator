@@ -1,20 +1,26 @@
 const config = require('../../config');
 const common = require('./common');
 
-class SessionValidator {
+const Result = require('./result');
+
+module.exports = class SessionValidator {
 	constructor(type, params) {
 		this.type = type.name;
 		this.params = params;
 	}
 
 	validate(session) {
+		const name = session.$.NAME;
+		const description = session.$.DESCRIPTION;
+		const mappingName = session.$.MAPPINGNAME;
+
 		const result = {
-			name: session.$.NAME,
+			name,
 			errors: []
 		};
 
-		result.errors.push(this.checkName(session.$.NAME, session.$.MAPPINGNAME));
-		result.errors.push(common.checkDescription(session.$.DESCRIPTION, this.params));
+		result.errors.push(this.checkName(name, mappingName));
+		result.errors.push(common.checkDescription(description, this.params));
 
 		// Check extensions (connections)
 		if (session.SESSIONEXTENSION) {
@@ -25,15 +31,12 @@ class SessionValidator {
 
 		// Check override of defaut config
 		if (session.CONFIGREFERENCE && session.CONFIGREFERENCE[0].ATTRIBUTE) {
-			result.errors.push({
-				severity: config.SEVERITY.WARNING,
-				text: 'Default config is overriden'
-			});
+			result.errors.push(new Result('Default config is overriden', config.SEVERITY.WARNING));
 		}
 
 		// Check attributes
 		if (session.ATTRIBUTE) {
-			result.errors.push(...session.ATTRIBUTE.map(e => this.checkAttribute(e)));
+			result.errors.push(...session.ATTRIBUTE.map(e => SessionValidator.checkAttribute(e)));
 		}
 
 		return common.cleanResult(result, this.params);
@@ -46,10 +49,10 @@ class SessionValidator {
 		// Verify that name matches with mapping
 		let sessionResult = {};
 		if (sessionName.substring(1) !== mappingName.substring(1)) {
-			sessionResult = {
-				severity: config.SEVERITY.ERROR,
-				text: `Invalid Name (Mapping ${mappingName})`
-			};
+			sessionResult = new Result(
+				`Invalid Name (Mapping ${mappingName})`,
+				config.SEVERITY.ERROR
+			);
 		}
 
 		const result = {
@@ -65,41 +68,40 @@ class SessionValidator {
 		const connec = ex.CONNECTIONREFERENCE;
 
 		if (connec && connec.CNXREFNAME === 'DB Connection' && !connec.VARIABLE.startsWith('$')) {
-			result = {
-				severity: config.SEVERITY.ERROR,
-				text: `Use variables for connections (${ex.SINSTANCENAME})`
-			};
+			result = new Result(
+				`Use variables for connections (${ex.SINSTANCENAME})`,
+				config.SEVERITY.ERROR
+			);
 		}
 
 		return result;
 	}
 
-	checkAttribute(attr) {
+	static checkAttribute(attr) {
 		let result = {};
+		const name = attr.$.NAME;
+		const value = attr.$.VALUE;
 
-		switch (attr.$.NAME) {
+		switch (name) {
 			case 'Write Backward Compatible Session Log File':
-				if (this.params.WARNING_ENABLED === true && attr.$.VALUE !== 'YES') {
-					result = {
-						severity: config.SEVERITY.WARNING,
-						text: 'Backward logs disabled'
-					};
+				if (value !== 'YES') {
+					result = new Result('Backward logs disabled', config.SEVERITY.WARNING);
 				}
 				break;
 			case '$Source connection value':
-				if (attr.$.VALUE.length > 0 && !attr.$.VALUE.startsWith('$DBConnection')) {
-					result = {
-						severity: config.SEVERITY.ERROR,
-						text: 'Invalid $Source connection information (use variable)'
-					};
+				if (value.length > 0 && !value.startsWith('$DBConnection')) {
+					result = new Result(
+						'Invalid $Source connection information (use variable)',
+						config.SEVERITY.ERROR
+					);
 				}
 				break;
 			case '$Target connection value':
-				if (attr.$.VALUE.length > 0 && !attr.$.VALUE.startsWith('$DBConnection')) {
-					result = {
-						severity: config.SEVERITY.ERROR,
-						text: 'Invalid $Target connection information (use variable)'
-					};
+				if (value.length > 0 && !value.startsWith('$DBConnection')) {
+					result = new Result(
+						'Invalid $Target connection information (use variable)',
+						config.SEVERITY.ERROR
+					);
 				}
 				break;
 			default:
@@ -108,6 +110,4 @@ class SessionValidator {
 
 		return result;
 	}
-}
-
-module.exports = SessionValidator;
+};

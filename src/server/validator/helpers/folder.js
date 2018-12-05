@@ -2,10 +2,11 @@ const config = require('../../config');
 const WorkItemValidator = require('./workItem');
 const SessionValidator = require('./session');
 const MappItemValidator = require('./mappItem');
+const Result = require('./result');
 
 const common = require('./common');
 
-class FolderValidator {
+module.exports = class FolderValidator {
 	constructor(params) {
 		this.type = config.OBJECTS.FOLDER;
 		this.params = params;
@@ -18,8 +19,10 @@ class FolderValidator {
 	}
 
 	validate(folder) {
+		const name = folder.$.NAME;
+
 		const result = {
-			name: folder.$.NAME,
+			name,
 			countErrors: 0,
 			countWarn: 0,
 			workflows: [],
@@ -58,8 +61,10 @@ class FolderValidator {
 	}
 
 	checkConfig(cfgItem) {
+		const name = cfgItem.$.NAME;
+
 		const result = {
-			name: cfgItem.$.NAME,
+			name,
 			errors: []
 		};
 
@@ -71,17 +76,14 @@ class FolderValidator {
 	}
 
 	static checkConfigAttribute(attr) {
+		const name = attr.$.NAME;
+		const value = attr.$.VALUE;
 		let result = {};
 
-		if (attr.$.NAME === 'Stop on errors' && attr.$.VALUE !== '1') {
-			result = {
-				severity: config.SEVERITY.ERROR,
-				text: 'Stop on Errors should be set to 1'
-			};
+		if (name === 'Stop on errors' && value !== '1') {
+			result = new Result('Stop on Errors should be set to 1', config.SEVERITY.ERROR);
 		}
 
 		return result;
 	}
-}
-
-module.exports = FolderValidator;
+};

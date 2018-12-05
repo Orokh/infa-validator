@@ -1,8 +1,10 @@
 const config = require('../../config');
 const common = require('./common');
+
+const Result = require('./result');
 const SessionValidator = require('./session');
 
-class WorkItemValidator {
+module.exports = class WorkItemValidator {
 	constructor(type, params) {
 		this.type = type.name;
 		this.params = params;
@@ -11,32 +13,34 @@ class WorkItemValidator {
 	}
 
 	validate(workItem) {
+		const name = workItem.$.NAME;
+
 		const result = {
-			name: workItem.$.NAME,
+			name,
 			errors: [],
 			sessions: []
 		};
 
 		// Naming convention
-		result.errors.push(common.checkObjectName(workItem.$.NAME, this.type, this.params));
+		result.errors.push(common.checkObjectName(name, this.type, this.params));
 
 		// Attributes
 		if (workItem.ATTRIBUTE) {
 			result.errors.push(
-				...workItem.ATTRIBUTE.map(e => WorkItemValidator.checkAttribute(e, workItem.$.NAME))
+				...workItem.ATTRIBUTE.map(elt => WorkItemValidator.checkAttribute(elt, name))
 			);
 		}
 
 		// Instances
 		if (workItem.TASKINSTANCE) {
 			result.errors.push(
-				...workItem.TASKINSTANCE.map(e => WorkItemValidator.checkTaskInstance(e))
+				...workItem.TASKINSTANCE.map(elt => WorkItemValidator.checkTaskInstance(elt))
 			);
 		}
 
 		// Sessions
 		if (workItem.SESSION) {
-			result.sessions = workItem.SESSION.map(e => this.sessionValidator.validate(e));
+			result.sessions = workItem.SESSION.map(elt => this.sessionValidator.validate(elt));
 		}
 
 		return common.cleanResult(result, this.params);
@@ -51,18 +55,12 @@ class WorkItemValidator {
 		switch (name) {
 			case 'Write Backward Compatible Workflow Log File':
 				if (value !== 'YES') {
-					result = {
-						severity: config.SEVERITY.WARNING,
-						text: 'Backward logs disabled'
-					};
+					result = new Result('Backward logs disabled', config.SEVERITY.WARNING);
 				}
 				break;
 			case 'Workflow Log File Name':
 				if (wfName !== value.split('.')[0]) {
-					result = {
-						severity: config.SEVERITY.WARNING,
-						text: 'Badly named log file'
-					};
+					result = new Result('Badly named log file', config.SEVERITY.WARNING);
 				}
 				break;
 			case 'Save Workflow log by':
@@ -76,22 +74,15 @@ class WorkItemValidator {
 
 	static checkTaskInstance(task) {
 		let result = {};
+		const name = task.$.NAME;
+		const type = task.$.TASKTYPE.toUpperCase();
 
-		if (
-			task.$.NAME.toUpperCase() !== 'START' &&
-			(task.$.TASKTYPE.toUpperCase() === 'SESSION' ||
-				task.$.TASKTYPE.toUpperCase() === 'WORKLET')
-		) {
+		if (name !== 'START' && (type === 'SESSION' || type === 'WORKLET')) {
 			if (task.$.FAIL_PARENT_IF_INSTANCE_FAILS !== 'YES') {
-				result = {
-					severity: config.SEVERITY.ERROR,
-					text: `Failure management invalid: ${task.$.NAME}`
-				};
+				result = new Result(`Failure management invalid: ${name}`, config.SEVERITY.ERROR);
 			}
 		}
 
 		return result;
 	}
-}
-
-module.exports = WorkItemValidator;
+};

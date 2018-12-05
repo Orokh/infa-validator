@@ -19,19 +19,14 @@ function checkName(name, category, type, params) {
 	return result;
 }
 
-function checkObjectName(name, type, params) {
-	return checkName(name, 'OBJECTS', type, params);
-}
+module.exports.checkObjectName = (name, type, params) => checkName(name, 'OBJECTS', type, params);
 
-function checkTransName(name, type, params) {
-	return checkName(name, 'TRANSFORMATIONS', type, params);
-}
+module.exports.checkTransName = (name, type, params) =>
+	checkName(name, 'TRANSFORMATIONS', type, params);
 
-function checkFieldName(name, type, params) {
-	return checkName(name, 'FIELDS', type, params);
-}
+module.exports.checkFieldName = (name, type, params) => checkName(name, 'FIELDS', type, params);
 
-function checkDescription(description, params) {
+module.exports.checkDescription = (description, params) => {
 	const result = {};
 
 	if (description.length === 0) {
@@ -52,7 +47,7 @@ function checkDescription(description, params) {
 	}
 
 	return result;
-}
+};
 
 function getCount(errors) {
 	const resCount = {
@@ -83,7 +78,7 @@ function trimErrors(errors, params) {
 	return result;
 }
 
-function cleanResult(result, params) {
+module.exports.cleanResult = (result, params) => {
 	let newRes = result;
 
 	if (result.errors) {
@@ -107,10 +102,4 @@ function cleanResult(result, params) {
 	}
 
 	return newRes;
-}
-
-module.exports.checkDescription = checkDescription;
-module.exports.checkObjectName = checkObjectName;
-module.exports.checkTransName = checkTransName;
-module.exports.checkFieldName = checkFieldName;
-module.exports.cleanResult = cleanResult;
+};

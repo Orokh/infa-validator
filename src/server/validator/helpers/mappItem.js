@@ -1,7 +1,11 @@
+const lib = require.main.require('../lib/lib');
+
 const config = require('../../config');
 const common = require('./common');
 
-class MappItemValidator {
+const Result = require('./result');
+
+module.exports = class MappItemValidator {
 	constructor(type, params) {
 		this.type = type.name;
 		this.params = params;
@@ -19,8 +23,10 @@ class MappItemValidator {
 		const name = mappItem.$.NAME;
 		const description = mappItem.$.DESCRIPTION;
 
-		const fromLinks = [];
-		const toLinks = [];
+		const links = {
+			INPUT: [],
+			OUTPUT: []
+		};
 
 		const result = {
 			name,
@@ -34,8 +40,8 @@ class MappItemValidator {
 		if (mappItem.CONNECTOR) {
 			// Initiate list of links
 			mappItem.CONNECTOR.forEach(elt => {
-				fromLinks.push(`${elt.$.FROMINSTANCE}|${elt.$.FROMFIELD}`);
-				toLinks.push(`${elt.$.TOINSTANCE}|${elt.$.TOFIELD}`);
+				links.OUTPUT.push(`${elt.$.FROMINSTANCE}|${elt.$.FROMFIELD}`);
+				links.INPUT.push(`${elt.$.TOINSTANCE}|${elt.$.TOFIELD}`);
 			});
 
 			result.errors.push(
@@ -49,9 +55,7 @@ class MappItemValidator {
 		if (mappItem.TRANSFORMATION) {
 			const transformations = this.cleanTransList(mappItem.TRANSFORMATION);
 
-			result.transformations = transformations.map(e =>
-				this.checkTransformation(e, fromLinks, toLinks)
-			);
+			result.transformations = transformations.map(e => this.checkTransformation(e, links));
 		}
 
 		return common.cleanResult(result, this.params);
@@ -81,16 +85,18 @@ class MappItemValidator {
 		return transType;
 	}
 
-	checkTransformation(trans, fromLinks, toLinks) {
+	checkTransformation(trans, links) {
 		const name = trans.$.NAME;
 		const description = trans.$.DESCRIPTION;
+		let type = trans.$.TYPE;
+		const templateName = trans.$.TEMPLATENAME;
 
 		const result = {
 			name,
 			errors: []
 		};
 
-		const type = MappItemValidator.getTransType(trans.$.TYPE, trans.$.TEMPLATENAME);
+		type = MappItemValidator.getTransType(type, templateName);
 
 		const typeConfig = MappItemValidator.getTransConfig(type);
 
@@ -104,7 +110,7 @@ class MappItemValidator {
 
 			result.errors.push(
 				...trans.TRANSFORMFIELD.map(e =>
-					MappItemValidator.checkFieldConnection(e, name, typeConfig, fromLinks, toLinks)
+					MappItemValidator.checkFieldConnection(e, name, typeConfig, links)
 				)
 			);
 		}
@@ -144,16 +150,13 @@ class MappItemValidator {
 		}
 
 		if (isBadName) {
-			result = {
-				severity: config.SEVERITY.ERROR,
-				text: errText
-			};
+			result = new Result(errText, config.SEVERITY.ERROR);
 		}
 
 		return result;
 	}
 
-	static checkFieldConnection(field, transName, transConfig, fromLinks, toLinks) {
+	static checkFieldConnection(field, transName, transConfig, links) {
 		let result = {};
 		let badConnection = false;
 		let errText = '';
@@ -163,22 +166,16 @@ class MappItemValidator {
 			const portType = field.$.PORTTYPE;
 			const linkName = `${transName}|${name}`;
 
-			if (portType === config.FIELDS.IO || portType === config.FIELDS.INPUT) {
-				badConnection = toLinks.indexOf(linkName) === -1;
-				errText = `Input ${name} not connected`;
-			}
-
-			if (portType === config.FIELDS.IO || portType === config.FIELDS.OUTPUT) {
-				badConnection = fromLinks.indexOf(linkName) === -1;
-				errText = `Output ${name} not connected`;
-			}
+			Object.keys(links).forEach(elt => {
+				if (portType === config.FIELDS.IO || portType === config.FIELDS[elt]) {
+					badConnection = links[elt].indexOf(linkName) === -1;
+					errText = `${lib.capitalize(elt)} ${name} not connected`;
+				}
+			});
 		}
 
 		if (badConnection) {
-			result = {
-				severity: config.SEVERITY.ERROR,
-				text: errText
-			};
+			result = new Result(errText, config.SEVERITY.ERROR);
 		}
 
 		return result;
@@ -193,10 +190,7 @@ class MappItemValidator {
 		switch (transType) {
 			case config.TRANSFORMATIONS.LOOKUP.name:
 				if (name === 'Lookup policy on multiple match' && value !== 'Report Error') {
-					result = {
-						severity: config.SEVERITY.WARNING,
-						text: 'No alert on multiple results'
-					};
+					result = new Result('No alert on multiple results', config.SEVERITY.WARNING);
 				} else if (name === 'Lookup Sql Override') {
 					result = this.checkOverride(transType, transName, value);
 				}
@@ -222,10 +216,10 @@ class MappItemValidator {
 			(sqlQuery.length > 0 && !transName.startsWith(overrideName)) ||
 			(sqlQuery.length === 0 && transName.startsWith(overrideName))
 		) {
-			result = {
-				severity: config.SEVERITY.ERROR,
-				text: `Invalid Name - ${sqlQuery.length === 0 ? ' Not ' : ' '} Overriden`
-			};
+			result = new Result(
+				`Invalid Name - ${sqlQuery.length === 0 ? ' Not ' : ' '} Overriden`,
+				config.SEVERITY.ERROR
+			);
 		}
 
 		return result;
@@ -258,16 +252,14 @@ class MappItemValidator {
 					const fromType = `${toField.DATATYPE} (${toField.PRECISION}, ${toField.SCALE})`;
 					const toType = `${toField.DATATYPE} (${toField.PRECISION}, ${toField.SCALE})`;
 
-					result = {
-						severity: config.SEVERITY.ERROR,
-						text: `Data types do not match (${fromName} - ${fromType} > ${toName} - ${toType})`
-					};
+					result = new Result(
+						`Data types do not match (${fromName} - ${fromType} > ${toName} - ${toType})`,
+						config.SEVERITY.ERROR
+					);
 				}
 			}
 		}
 
 		return result;
 	}
-}
-
-module.exports = MappItemValidator;
+};

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FormComponent from './formComponent';
 
-function Section(props) {
+export default function Section(props) {
 	const { id, label, components, defValues, onChange, onClick } = props;
 
 	return (
@@ -46,5 +46,3 @@ Section.propTypes = {
 Section.defaultProps = {
 	defValues: {}
 };
-
-export default Section;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function FileInput(props) {
+export default function FileInput(props) {
 	const { id, validate, onFileChosen, ready } = props;
 
 	return (
@@ -42,5 +42,3 @@ FileInput.propTypes = {
 	validate: PropTypes.func.isRequired,
 	onFileChosen: PropTypes.func.isRequired
 };
-
-export default FileInput;

@@ -1,7 +1,7 @@
 import React from 'react';
 import UIActions from './uiActions';
 
-function Title() {
+export default function Title() {
 	return (
 		<div id="header" className="w3-container w3-theme-dark w3-card-2">
 			<button
@@ -24,5 +24,3 @@ function Title() {
 		</div>
 	);
 }
-
-export default Title;

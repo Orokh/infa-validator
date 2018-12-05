@@ -1,4 +1,4 @@
-class UIAction {
+export default class UIAction {
 	static showGroup(groupID) {
 		const { id } = groupID;
 
@@ -73,5 +73,3 @@ class UIAction {
 		e.target.className += ' w3-theme';
 	}
 }
-
-export default UIAction;

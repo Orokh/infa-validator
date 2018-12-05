@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function FormComponent(props) {
+export default function FormComponent(props) {
 	const { id, type = 'text', label, cmpProps = {}, onChange, defValue } = props;
 
 	const checked = {};
@@ -42,4 +42,3 @@ FormComponent.defaultProps = {
 	type: 'text',
 	cmpProps: {}
 };
-export default FormComponent;

@@ -41,9 +41,16 @@ class Validator {
 
 	validate(fileID) {
 		const content = Validator.getFile(fileID);
+		let extractDate = content.POWERMART.$.CREATION_DATE;
+
+		// MM/DD/YYYY HH24:MI:SS
+		const datePattern = /(\d{2})\/(\d{2})\/(\d{4}) (\d{2}):(\d{2}):(\d{2})/;
+		extractDate = new Date(extractDate.replace(datePattern, '$3-$1-$2T$4:$5:$6'));
+
+		console.log(extractDate);
 
 		const result = {
-			extractDate: content.POWERMART.$.CREATION_DATE,
+			extractDate,
 			folders: content.POWERMART.REPOSITORY[0].FOLDER.map(e =>
 				this.folderValidator.validate(e)
 			)
@@ -103,11 +110,11 @@ class Validator {
 			TableName: config.aws_table_names.RESULT,
 			Item: {
 				folderName: `${folderName}`,
-				objectReviewDate: `${object.name}#${this.reviewDate.toISOString()}`,
-				reviewDate: this.reviewDate.toISOString(),
+				objectExtractDate: `${object.name}#${extractDate.toISOString()}`,
+				lastReviewDate: this.reviewDate.toISOString(),
 				countErrors: object.countErrors,
 				countWarn: object.countWarn,
-				extractDate
+				extractDate: extractDate.toISOString()
 			}
 		};
 

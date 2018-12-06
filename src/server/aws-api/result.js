@@ -43,7 +43,7 @@ module.exports = app => {
 			// Get results for a single item, based on folder and name
 			const params = {
 				...defaultParams,
-				KeyConditionExpression: `folderName = :folderName and begins_with(objectReviewDate, :objectName)`,
+				KeyConditionExpression: `folderName = :folderName and begins_with(objectExtractDate, :objectName)`,
 				ExpressionAttributeValues: {
 					':folderName': folderName,
 					':objectName': `${objectName}#`

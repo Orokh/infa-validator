@@ -15,6 +15,10 @@ a {
 	z-index: 2;
 }
 
+#header .material-icons {
+	margin-top: 3px;
+}
+
 #sideNav {
 	padding-top: 50px;
 	width: 300px;
@@ -86,7 +90,7 @@ a {
 }
 
 .material-icons {
-	vertical-align: -19%;
+	vertical-align: -22%;
 }
 
 .contentWithSidebar {

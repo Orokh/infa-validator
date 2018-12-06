@@ -58,7 +58,6 @@ export default class SideBar extends React.Component {
 		const { fileID } = this.state;
 
 		if (typeof fileID !== 'undefined') {
-			console.log(fileID, typeof fileID);
 			const sentData = {
 				method: 'DELETE',
 				headers: {

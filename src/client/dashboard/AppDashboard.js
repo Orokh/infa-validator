@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Bar } from 'react-chartjs-2';
 
 import '../app.css';
 
 import Title from '../common/title';
 import ItemSelector from './components/itemSelector';
+import ResultChart from './components/resultChart';
 
 export default class AppDashboard extends Component {
 	constructor(props) {
@@ -82,44 +82,7 @@ export default class AppDashboard extends Component {
 	}
 
 	render() {
-		const { labels, errValues, warnValues } = this.state;
-
-		const chartData = {
-			labels,
-			datasets: [
-				{
-					label: 'Errors',
-					backgroundColor: 'rgba(244,67,45,0.5)',
-					data: errValues
-				},
-				{
-					label: 'Warnings',
-					backgroundColor: 'rgba(255,152,0,0.5)',
-					data: warnValues
-				}
-			]
-		};
-
-		const chartOptions = {
-			scales: {
-				yAxes: [
-					{
-						ticks: {
-							min: 0,
-							callback: value => {
-								if (Math.floor(value) === value) {
-									return value;
-								}
-								return null;
-							}
-						}
-					}
-				]
-			}
-		};
-
-		const { foldersList } = this.state;
-		const { objectsList } = this.state;
+		const { labels, errValues, warnValues, foldersList, objectsList } = this.state;
 
 		return (
 			<div id="wrapper">
@@ -140,11 +103,7 @@ export default class AppDashboard extends Component {
 							/>{' '}
 						</div>{' '}
 					</div>{' '}
-					<div className="w3-container">
-						<div className="w3-row-padding w3-margin-top w3-white">
-							<Bar data={chartData} width={100} height={30} options={chartOptions} />{' '}
-						</div>{' '}
-					</div>{' '}
+					<ResultChart labels={labels} errValues={errValues} warnValues={warnValues} />{' '}
 				</div>{' '}
 			</div>
 		);

@@ -11,11 +11,28 @@ module.exports = class FolderValidator {
 		this.type = config.OBJECTS.FOLDER;
 		this.params = params;
 
-		this.workflowValidator = new WorkItemValidator(config.OBJECTS.WORKFLOW, this.params);
-		this.workletValidator = new WorkItemValidator(config.OBJECTS.WORKLET, this.params);
-		this.sessionValidator = new SessionValidator(config.OBJECTS.SESSION, this.params);
-		this.mappingValidator = new MappItemValidator(config.OBJECTS.MAPPING, this.params);
-		this.mappletValidator = new MappItemValidator(config.OBJECTS.MAPPLET, this.params);
+		this.container = {
+			WORKFLOW: {
+				name: 'workflows',
+				validator: new WorkItemValidator(config.OBJECTS.WORKFLOW, this.params)
+			},
+			WORKLET: {
+				name: 'worklets',
+				validator: new WorkItemValidator(config.OBJECTS.WORKLET, this.params)
+			},
+			SESSION: {
+				name: 'sessions',
+				validator: new SessionValidator(config.OBJECTS.SESSION, this.params)
+			},
+			MAPPING: {
+				name: 'mappings',
+				validator: new MappItemValidator(config.OBJECTS.MAPPING, this.params)
+			},
+			MAPPLET: {
+				name: 'mapplets',
+				validator: new MappItemValidator(config.OBJECTS.MAPPLET, this.params)
+			}
+		};
 	}
 
 	validate(folder) {
@@ -25,36 +42,24 @@ module.exports = class FolderValidator {
 			name,
 			countErrors: 0,
 			countWarn: 0,
+			configs: [],
 			workflows: [],
 			worklets: [],
-			configs: [],
 			sessions: [],
 			mappings: [],
 			mapplets: []
 		};
 
-		if (folder.WORKFLOW) {
-			result.workflows = folder.WORKFLOW.map(e => this.workflowValidator.validate(e));
-		}
-
-		if (folder.WORKLET) {
-			result.worklets = folder.WORKLET.map(e => this.workletValidator.validate(e));
-		}
+		Object.keys(this.container).forEach(key => {
+			if (folder[key]) {
+				result[this.container[key].name] = folder[key].map(elt =>
+					this.container[key].validator.validate(elt)
+				);
+			}
+		});
 
 		if (folder.CONFIG) {
 			result.configs = folder.CONFIG.map(e => this.checkConfig(e));
-		}
-
-		if (folder.SESSION) {
-			result.sessions = folder.SESSION.map(e => this.sessionValidator.validate(e));
-		}
-
-		if (folder.MAPPING) {
-			result.mappings = folder.MAPPING.map(e => this.mappingValidator.validate(e));
-		}
-
-		if (folder.MAPPLET) {
-			result.mapplets = folder.MAPPLET.map(e => this.mappletValidator.validate(e));
 		}
 
 		return common.cleanResult(result, this.params);

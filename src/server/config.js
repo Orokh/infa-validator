@@ -43,7 +43,7 @@ module.exports = Object.freeze({
 		INPUT: {
 			name: 'Input Transformation',
 			checkFieldName: false,
-			checkConnectors: false
+			checkConnectors: true
 		},
 		JOINER: {
 			name: 'Joiner',
@@ -68,7 +68,7 @@ module.exports = Object.freeze({
 		OUTPUT: {
 			name: 'Output Transformation',
 			checkFieldName: false,
-			checkConnectors: false
+			checkConnectors: true
 		},
 		ROUTER: {
 			name: 'Router',
@@ -93,7 +93,7 @@ module.exports = Object.freeze({
 		TRANS_CTL: {
 			name: 'Transaction Control',
 			checkFieldName: true,
-			checkConnectors: true
+			checkConnectors: false
 		},
 		UNION: {
 			name: 'Union Transformation',

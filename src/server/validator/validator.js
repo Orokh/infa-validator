@@ -47,8 +47,6 @@ class Validator {
 		const datePattern = /(\d{2})\/(\d{2})\/(\d{4}) (\d{2}):(\d{2}):(\d{2})/;
 		extractDate = new Date(extractDate.replace(datePattern, '$3-$1-$2T$4:$5:$6'));
 
-		console.log(extractDate);
-
 		const result = {
 			extractDate,
 			folders: content.POWERMART.REPOSITORY[0].FOLDER.map(e =>

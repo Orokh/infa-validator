@@ -5,4 +5,4 @@ dist
 *.log
 yarn.lock
 package-lock.json
-src/server/api/storage
+src/server/api/storage/*

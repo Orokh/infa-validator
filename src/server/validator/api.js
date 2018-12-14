@@ -89,6 +89,9 @@ function postValidateFile(req, res) {
 				SORTER: {
 					default: req.body.srtNaming
 				},
+				'TRANSACTION CONTROL': {
+					default: req.body.tcNaming
+				},
 				'UNION TRANSFORMATION': {
 					default: req.body.unNaming
 				},

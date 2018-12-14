@@ -90,6 +90,11 @@ module.exports = Object.freeze({
 			checkFieldName: true,
 			checkConnectors: true
 		},
+		TRANS_CTL: {
+			name: 'Transaction Control',
+			checkFieldName: true,
+			checkConnectors: true
+		},
 		UNION: {
 			name: 'Union Transformation',
 			checkFieldName: false,

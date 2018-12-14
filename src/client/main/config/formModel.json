@@ -127,6 +127,11 @@
 				"defaultValue": "SQ_OW"
 			},
 			{
+				"key": "tcNaming",
+				"label": "Transaction Control",
+				"defaultValue": "TCT"
+			},
+			{
 				"key": "unNaming",
 				"label": "Union",
 				"defaultValue": "UN"

@@ -5,7 +5,7 @@ import ErrorList from './errorList';
 import ResultItemHeader from './resultItemHeader';
 
 export default function ResultGroup(props) {
-	const { group } = props;
+	const { parentName, group } = props;
 
 	const errorList = group.map(elt => (
 		<div className="collapsible-content">
@@ -20,8 +20,13 @@ export default function ResultGroup(props) {
 				{group.map((elt, idx) => (
 					<li key={elt.name}>
 						{' '}
-						<input id={elt.name} className="collapsible-header" type="checkbox" />
+						<input
+							id={`${parentName}#${elt.name}`}
+							className="collapsible-header"
+							type="checkbox"
+						/>
 						<ResultItemHeader
+							parentName={parentName}
 							name={elt.name}
 							countErrors={elt.countErrors}
 							countWarn={elt.countWarn}
@@ -35,5 +40,6 @@ export default function ResultGroup(props) {
 }
 
 ResultGroup.propTypes = {
-	group: PropTypes.arrayOf(PropTypes.object).isRequired
+	group: PropTypes.arrayOf(PropTypes.object).isRequired,
+	parentName: PropTypes.string.isRequired
 };

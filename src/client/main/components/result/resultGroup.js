@@ -18,12 +18,14 @@ export default function ResultGroup(props) {
 		let subGroups = [];
 
 		if (subGroupName.length > 0) {
-			subGroups = group.map(elt => <ResultSubGroup group={elt[subGroupName]} />);
+			subGroups = group.map(elt => (
+				<ResultSubGroup parentName={elt.name} group={elt[subGroupName]} />
+			));
 		}
 
 		content = group.map((elt, idx) => (
 			<li key={elt.name}>
-				<input id={elt.name} className="collapsible-header" type="checkbox" />
+				<input id={`#${elt.name}`} className="collapsible-header" type="checkbox" />
 				<ResultItemHeader
 					name={elt.name}
 					countErrors={elt.countErrors}
